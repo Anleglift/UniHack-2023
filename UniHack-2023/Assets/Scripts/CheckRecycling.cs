@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckRecycling : MonoBehaviour
 {
+    public CoordinateSender CoordinateSender;
+    public TextMeshProUGUI Recycled;
     public struct Coordinates
     {
         public double x;
@@ -1465,13 +1469,29 @@ public class CheckRecycling : MonoBehaviour
         coordinateList.Add(new Coordinates(45.6741587, 25.6111167));
         coordinateList.Add(new Coordinates(45.675936, 25.6113274));
         coordinateList.Add(new Coordinates(45.6759822, 25.6107423));
-
+    }
+    void CheckLocation()
+    {
+        int ok = 0;
         foreach (var coordinates in coordinateList)
         {
-            Debug.Log("X: " + coordinates.x + ", Y: " + coordinates.y);
+            if(CoordinateSender.lat < coordinates.x + 0.0003 && CoordinateSender.lat > coordinates.x - 0.0003)
+            {
+                if(CoordinateSender.lon < coordinates.y + 0.0003 && CoordinateSender.lon > coordinates.y - 0.0003)
+                {
+                    ok = 1;
+                }
+            }
+        }
+        if (ok == 1)
+        {
+            Recycled.text = "Good job recycling! :)";
+        }
+        else
+        {
+            Recycled.text = "Recycling bin not detected,we are sorry :(";
         }
     }
-
     // Update is called once per frame
     void Update()
     {

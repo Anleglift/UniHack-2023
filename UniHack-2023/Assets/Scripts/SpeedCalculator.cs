@@ -15,13 +15,13 @@ public class SpeedCalculator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("GetInitialPositions", 3f);
+        Invoke("GetInitialPositions", 0.5f);
     }
     void GetInitialPositions()
     {
         latitude1=CoordinateSender.lat;
         longitude1 = CoordinateSender.lon;
-        InvokeRepeating("UpdatePositions", 2f, 2f);
+        InvokeRepeating("UpdatePositions", 1f, 5f);
     }
     void UpdatePositions()
     {
