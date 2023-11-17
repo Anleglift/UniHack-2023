@@ -1,82 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // Import the UI namespace
 
 public class Scroll : MonoBehaviour
 {
     public Transform contentContainer;
+    public GameObject canvas;
+    public CanvasGroup canvasGroup;
     public float scrollSpeed = 10f;
     public float minYPosition, maxYPosition;
+    public float minim, maxim;
+    void Start()
+    {
+        RectTransform canvasRect = canvas.GetComponent<RectTransform>();
+        maxYPosition = canvasRect.transform.position.y + canvasRect.rect.height * 0.5f - 1.0f * (contentContainer.GetChild(0).GetComponent<Button>().transform.position.y);
+        minYPosition = canvasRect.transform.position.y - canvasRect.rect.height * 0.5f;
+
+    }
     void Update()
     {
         // Get the vertical scroll input from the mouse wheel
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        IdentifyVisibleLines();
+
         // Scroll the content vertically
         ScrollContent(scrollInput);
     }
 
     void ScrollContent(float scrollInput)
     {
-        
-        bool CanMove = true;
-        for (int i = 0; i < contentContainer.childCount; i++)
+        // Apply the new Y position to each child element if movement is allowed
+        if (IdentifyVisibleLines())
         {
-            // Get the RectTransform of the child element
-            RectTransform childRect = contentContainer.GetChild(i).GetComponent<RectTransform>();
-            float Position = childRect.anchoredPosition.y;
-            if (!(Position < maxYPosition && Position> minYPosition))
-            {
-                CanMove = false;
-                break;
-            }
-        }
-        if (CanMove)
-        {
-            // Iterate through each child in the content container
-            for (int i = 0; i < contentContainer.childCount; i++)
+            foreach (Transform childTransform in contentContainer)
             {
                 // Get the RectTransform of the child element
-                RectTransform childRect = contentContainer.GetChild(i).GetComponent<RectTransform>();
-                float newYPosition = childRect.anchoredPosition.y + scrollInput * scrollSpeed;
+                RectTransform childRect = childTransform.GetComponent<RectTransform>();
+
                 // Calculate the new Y position based on the input and scroll speed
-                if (newYPosition <= maxYPosition && newYPosition >= minYPosition)
-                    childRect.anchoredPosition = new Vector2(childRect.anchoredPosition.x, newYPosition);
-                else
-                    break;
+                float newYPosition = childRect.position.y + scrollInput * scrollSpeed;
+
                 // Apply the new Y position to the child element
+                childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
             }
         }
     }
-    void IdentifyVisibleLines()
-    {
-        
-        RectTransform lastChild = contentContainer.GetChild(contentContainer.childCount - 1).GetComponent<RectTransform>();
-        RectTransform childOfLastChild = lastChild.GetChild(1).GetComponent<RectTransform>();
-        if (IsVisible(childOfLastChild.gameObject))
-            minYPosition = childOfLastChild.anchoredPosition.y;
-        else
-            minYPosition = lastChild.anchoredPosition.y;
 
-        RectTransform firstChild = contentContainer.GetChild(0).GetComponent<RectTransform>();
-        RectTransform childOfFirstChild = firstChild.GetChild(1).GetComponent<RectTransform>();
-        if (IsVisible(childOfFirstChild.gameObject))
-            maxYPosition = childOfFirstChild.anchoredPosition.y;
+    bool IdentifyVisibleLines()
+    {
+        RectTransform lastButton = contentContainer.GetChild(4).GetComponent<RectTransform>();
+        RectTransform textRectInLastButton = lastButton.GetComponentsInChildren<RectTransform>()[1];
+        if (canvasGroup.alpha==1)
+            minim = textRectInLastButton.position.y - textRectInLastButton.rect.height * 0.5f;
+        else if (canvasGroup.alpha==0)
+            minim = lastButton.transform.position.y - lastButton.GetComponent<RectTransform>().rect.height * 0.5f;
+
+        RectTransform firstButton = contentContainer.GetChild(0).GetComponent<RectTransform>();
+        maxim = firstButton.transform.position.y;
+        Debug.Log(maxim);
+        Debug.Log(minim);
+        if (minim < minYPosition || maxim > maxYPosition)
+            return true;
         else
-            maxYPosition = firstChild.anchoredPosition.y;
+            return false;
     }
+
     bool IsVisible(GameObject obj)
     {
-        // Get the Renderer component of the GameObject
-        Renderer renderer = obj.GetComponent<Renderer>();
-
-        // Check if the Renderer component exists and if it's visible from the camera's perspective
-        if (renderer != null && renderer.isVisible)
+        if (canvasGroup.alpha==1)
         {
-            // Additional checks can be added if needed (e.g., occlusion culling)
+            // The UI element is considered visible
             return true;
         }
-
+        else if (canvasGroup.alpha==0)
+        {
+            return false;
+        }
         return false;
     }
 }
