@@ -1,0 +1,5830 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Recycling Locations in Romania</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ3zP67iASQVen3yoZsVhLV_C8OfXvTVY&callback=initMap" async defer></script>
+    <script>
+      let map;
+      let coordinates = [{
+        lat: 45.6533055,
+        lng: 25.6284597,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4536998,
+        lng: 26.0415473,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6471475,
+        lng: 25.5896411,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4141969,
+        lng: 28.0094312,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4129484,
+        lng: 28.0084808,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4133624,
+        lng: 28.0106862,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.8121031,
+        lng: 21.6442184,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4099947,
+        lng: 26.1639633,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4191505,
+        lng: 26.1646691,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.413436,
+        lng: 26.1624584,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4649712,
+        lng: 26.0868703,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7697997,
+        lng: 23.5662175,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4577669,
+        lng: 26.0960359,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4806089,
+        lng: 26.1001411,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4180157,
+        lng: 26.1606049,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.533655,
+        lng: 24.550537,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5390369,
+        lng: 24.5581698,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5328239,
+        lng: 24.5592169,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5351299,
+        lng: 24.578567,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5598267,
+        lng: 24.5808357,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.922652,
+        lng: 26.01422,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5437847,
+        lng: 24.5508779,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5368908,
+        lng: 24.5461923,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5333548,
+        lng: 24.5615367,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5429733,
+        lng: 24.5394446,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4266054,
+        lng: 26.1631854,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4390878,
+        lng: 26.0993967,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4577264,
+        lng: 28.0269568,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4254517,
+        lng: 26.1722984,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4255013,
+        lng: 26.1670425,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4231849,
+        lng: 26.1668009,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5336186,
+        lng: 24.5651089,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.42398,
+        lng: 26.1711148,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4670579,
+        lng: 26.1396191,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7507358,
+        lng: 23.5793851,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7144821,
+        lng: 25.6859777,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.8190225,
+        lng: 23.9038377,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9189429,
+        lng: 26.0362214,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9271149,
+        lng: 25.9953556,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1198841,
+        lng: 27.6028813,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4842064,
+        lng: 26.0967561,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4655052,
+        lng: 26.1391157,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1388967,
+        lng: 27.5767128,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9206408,
+        lng: 26.0351493,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.0633639,
+        lng: 25.2742782,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.8885906,
+        lng: 22.9011559,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.0793369,
+        lng: 23.5606313,
+        title: 'Recycle Station'
+      }, {
+        lat: 43.9566462,
+        lng: 25.3516174,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1385285,
+        lng: 24.4866382,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2916521,
+        lng: 27.9577603,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.2061823,
+        lng: 27.3217173,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.1925347,
+        lng: 28.8221541,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5098954,
+        lng: 24.5113284,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5349318,
+        lng: 24.5746956,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5350304,
+        lng: 24.5747002,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5374935,
+        lng: 24.5411834,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5478173,
+        lng: 24.5499316,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.551347,
+        lng: 24.5750187,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5573144,
+        lng: 24.5637428,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5273772,
+        lng: 24.5554173,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.084914,
+        lng: 23.5712959,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5413671,
+        lng: 24.5555719,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5275896,
+        lng: 24.534847,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.52971,
+        lng: 24.5402406,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5379868,
+        lng: 24.5743002,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5556521,
+        lng: 24.5718387,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5315555,
+        lng: 24.5901439,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7634328,
+        lng: 23.6152488,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7646753,
+        lng: 23.6141408,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7836799,
+        lng: 23.5873977,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7769464,
+        lng: 23.587074,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7779636,
+        lng: 23.5873862,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4124067,
+        lng: 26.1299215,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7684693,
+        lng: 23.5792873,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7679436,
+        lng: 23.6286424,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7679983,
+        lng: 23.6297145,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7744613,
+        lng: 23.5862198,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7733429,
+        lng: 23.6070971,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7767666,
+        lng: 23.5819327,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7756166,
+        lng: 23.5902646,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.7793737,
+        lng: 22.8919249,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7595582,
+        lng: 23.6149555,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7603451,
+        lng: 23.6140458,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5667371,
+        lng: 26.0828757,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7694313,
+        lng: 23.5823631,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7892123,
+        lng: 23.6411543,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3040085,
+        lng: 23.8203704,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3119178,
+        lng: 23.8227091,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3265069,
+        lng: 23.7846908,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3277806,
+        lng: 23.7793921,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3047356,
+        lng: 23.8125374,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3077281,
+        lng: 23.792863,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.310476,
+        lng: 23.7913125,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.312232,
+        lng: 23.7893684,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3191782,
+        lng: 23.8252328,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3221981,
+        lng: 23.8224398,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3231871,
+        lng: 23.8205915,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3040237,
+        lng: 23.7980154,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1689185,
+        lng: 27.5883109,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3207554,
+        lng: 23.8257075,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3239197,
+        lng: 23.8166371,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3268725,
+        lng: 23.779114,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3315513,
+        lng: 23.7734217,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3350917,
+        lng: 23.7723824,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3327377,
+        lng: 23.7815571,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3349051,
+        lng: 23.7791471,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3358876,
+        lng: 23.778097,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3289181,
+        lng: 23.7857875,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3299898,
+        lng: 23.7842225,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3353457,
+        lng: 23.7782099,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3344384,
+        lng: 23.7810381,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3298877,
+        lng: 23.7978936,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.2073907,
+        lng: 28.6491808,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4439593,
+        lng: 25.5549665,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.769079,
+        lng: 23.6171255,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3054458,
+        lng: 23.8206073,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7772726,
+        lng: 23.6098646,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7778116,
+        lng: 23.6111665,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7775579,
+        lng: 23.606949,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7634042,
+        lng: 23.6088397,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7680043,
+        lng: 23.5996583,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5867644,
+        lng: 23.7869678,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.586781,
+        lng: 23.7870026,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5867405,
+        lng: 23.7869356,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7595826,
+        lng: 23.5896469,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.1259911,
+        lng: 25.8911482,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3311504,
+        lng: 23.7934668,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3334352,
+        lng: 23.8005737,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3339333,
+        lng: 23.7944471,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3353546,
+        lng: 23.7955245,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3176338,
+        lng: 23.8061542,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3202951,
+        lng: 23.8316467,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3294335,
+        lng: 23.8039967,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3295468,
+        lng: 23.8036649,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5576249,
+        lng: 24.5447628,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5581875,
+        lng: 24.5465114,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5581881,
+        lng: 24.5474683,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7713805,
+        lng: 23.6253154,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7651133,
+        lng: 23.5443483,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7665846,
+        lng: 23.5464287,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7668804,
+        lng: 23.5456304,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7689968,
+        lng: 23.5487054,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3174788,
+        lng: 23.8212219,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4241431,
+        lng: 26.1753461,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4242581,
+        lng: 26.1747534,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4213931,
+        lng: 26.1754188,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4807457,
+        lng: 26.1229821,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.481222,
+        lng: 26.1217651,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4554508,
+        lng: 26.3414639,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4634006,
+        lng: 26.3352431,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4639764,
+        lng: 26.3411542,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7541687,
+        lng: 23.5805824,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7758714,
+        lng: 23.6285541,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.776686,
+        lng: 23.63414,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7314372,
+        lng: 21.2604739,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7299563,
+        lng: 21.2649045,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7571789,
+        lng: 21.2555623,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7535543,
+        lng: 23.5850055,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.704733,
+        lng: 24.0348988,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6310903,
+        lng: 25.6049898,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.2054168,
+        lng: 21.3004812,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7614741,
+        lng: 23.6140467,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7618572,
+        lng: 23.6149985,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7597973,
+        lng: 23.6160327,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7709117,
+        lng: 23.6239018,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7740585,
+        lng: 21.2468434,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3403274,
+        lng: 25.8076106,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3256558,
+        lng: 25.3147087,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3034115,
+        lng: 25.2907738,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3113116,
+        lng: 25.3108746,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3076422,
+        lng: 25.2884802,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3134427,
+        lng: 25.2884854,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3115474,
+        lng: 25.2962728,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.0982182,
+        lng: 26.6500325,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.768581,
+        lng: 23.6083898,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.6414502,
+        lng: 22.670235,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3032528,
+        lng: 25.2887922,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7248772,
+        lng: 25.6038,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7210092,
+        lng: 25.5927015,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7182289,
+        lng: 25.596727,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7228904,
+        lng: 25.5994514,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3056336,
+        lng: 25.3056904,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.303546,
+        lng: 25.302989,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7217689,
+        lng: 25.5916456,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7218937,
+        lng: 25.5951733,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7230063,
+        lng: 25.5937584,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7225706,
+        lng: 25.5920844,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3957175,
+        lng: 25.3684304,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4500033,
+        lng: 28.0313325,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5137132,
+        lng: 23.8142015,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.4969976,
+        lng: 23.708547,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.4984247,
+        lng: 23.6776119,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.4867442,
+        lng: 23.7340588,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5537496,
+        lng: 23.7841043,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.4665002,
+        lng: 23.7375538,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.4245212,
+        lng: 23.6437409,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5220922,
+        lng: 26.9452661,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.4999413,
+        lng: 23.7374827,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.8212572,
+        lng: 26.3771351,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7777468,
+        lng: 21.2350015,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7628611,
+        lng: 21.2478985,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.7317359,
+        lng: 26.6841122,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7950772,
+        lng: 23.6124683,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5334478,
+        lng: 26.0984051,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5334539,
+        lng: 26.0975576,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4953592,
+        lng: 26.1782796,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5486576,
+        lng: 23.8854751,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5333762,
+        lng: 26.096681,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5322756,
+        lng: 26.1022585,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5328332,
+        lng: 26.1009473,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5327837,
+        lng: 26.0992742,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5335418,
+        lng: 26.1019444,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5340932,
+        lng: 26.0948624,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5340245,
+        lng: 26.0945505,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5328074,
+        lng: 26.0984659,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5306401,
+        lng: 26.10188,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5308696,
+        lng: 26.1030709,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5563486,
+        lng: 23.8138608,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.499128,
+        lng: 23.6632298,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5676921,
+        lng: 23.7830985,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.5830889,
+        lng: 23.5263821,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.5855499,
+        lng: 23.5663216,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.5796854,
+        lng: 23.5715559,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3367375,
+        lng: 26.1078614,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4478946,
+        lng: 26.0744244,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5364813,
+        lng: 23.8835343,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5347158,
+        lng: 23.8846759,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4561635,
+        lng: 26.0615578,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4561439,
+        lng: 26.0615719,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4173566,
+        lng: 26.1696951,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4182196,
+        lng: 26.1704534,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3794852,
+        lng: 26.1320531,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3635193,
+        lng: 26.124944,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5591165,
+        lng: 23.7979635,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.564518,
+        lng: 23.7768132,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9376071,
+        lng: 26.0467305,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5328627,
+        lng: 26.1033577,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5340175,
+        lng: 26.0960008,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5334037,
+        lng: 26.0940442,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9196523,
+        lng: 25.9942851,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.438484,
+        lng: 24.3851367,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9272668,
+        lng: 25.9951032,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9187872,
+        lng: 26.0361817,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9382829,
+        lng: 25.9840813,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9360462,
+        lng: 25.988622,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8496031,
+        lng: 26.0238241,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1566527,
+        lng: 27.6042885,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1579276,
+        lng: 27.5746983,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7503133,
+        lng: 23.6068067,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5599631,
+        lng: 23.817354,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7545784,
+        lng: 23.6280263,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7778102,
+        lng: 23.6111396,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7272974,
+        lng: 21.3094534,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.7436608,
+        lng: 26.6710082,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7872883,
+        lng: 24.1519718,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.747808,
+        lng: 23.5965342,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4181167,
+        lng: 26.1708108,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7337747,
+        lng: 21.2317846,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1670107,
+        lng: 27.5130718,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5841031,
+        lng: 23.7763023,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5841068,
+        lng: 23.776342,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5365689,
+        lng: 27.9863081,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1469894,
+        lng: 27.5849953,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1578517,
+        lng: 27.5748642,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4237388,
+        lng: 28.0178296,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4850446,
+        lng: 26.0387815,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7384243,
+        lng: 21.2293039,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7535103,
+        lng: 21.2277414,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7283479,
+        lng: 21.2097872,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725052,
+        lng: 21.2058251,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5644188,
+        lng: 24.90557,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5385479,
+        lng: 24.8173159,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.556826,
+        lng: 24.8671862,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7582166,
+        lng: 23.6146986,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4195557,
+        lng: 26.1635632,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4202995,
+        lng: 26.1634265,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7328034,
+        lng: 21.2295218,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7344009,
+        lng: 21.2373953,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7853176,
+        lng: 21.2214239,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7403953,
+        lng: 21.2420506,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7406215,
+        lng: 21.2421484,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7495509,
+        lng: 21.244005,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1577036,
+        lng: 26.2710226,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1597626,
+        lng: 26.2776139,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1620924,
+        lng: 26.2790262,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1267147,
+        lng: 26.2921289,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1425082,
+        lng: 26.2773796,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1487747,
+        lng: 26.2831878,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.7726014,
+        lng: 24.1362277,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.7728805,
+        lng: 24.1357387,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3685628,
+        lng: 26.1438992,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3635499,
+        lng: 26.1487382,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1618249,
+        lng: 22.8813705,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.645194,
+        lng: 25.6323194,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6435576,
+        lng: 25.6326738,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6434613,
+        lng: 25.634911,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.0562705,
+        lng: 21.9151782,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7200071,
+        lng: 25.5867677,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4048221,
+        lng: 26.0960034,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1592793,
+        lng: 22.8689983,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.761836,
+        lng: 21.2136958,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4244154,
+        lng: 26.1678111,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4232988,
+        lng: 26.1676944,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4168833,
+        lng: 26.1611885,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.758084,
+        lng: 23.5594978,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7581607,
+        lng: 23.5586417,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.758757,
+        lng: 23.559919,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7697276,
+        lng: 23.6099381,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7708915,
+        lng: 23.6107578,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7532026,
+        lng: 23.6131456,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.315487,
+        lng: 23.8234086,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7901088,
+        lng: 21.2238627,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3189663,
+        lng: 23.8081925,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.317397,
+        lng: 23.8145104,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3309791,
+        lng: 23.7740882,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3279058,
+        lng: 23.7786345,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9386972,
+        lng: 25.996345,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9396454,
+        lng: 25.9923235,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9384895,
+        lng: 25.9932324,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9379367,
+        lng: 26.0061774,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.2086489,
+        lng: 21.2930232,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4111448,
+        lng: 26.1720512,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.414384,
+        lng: 26.1833357,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4150225,
+        lng: 26.1859644,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7622281,
+        lng: 23.6190721,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7625835,
+        lng: 23.6209012,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7634882,
+        lng: 23.6230121,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7667011,
+        lng: 23.6207636,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.762374,
+        lng: 23.6151447,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7656147,
+        lng: 23.6234576,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.766128,
+        lng: 23.6219312,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7625992,
+        lng: 23.6144288,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7616102,
+        lng: 23.6153221,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7634372,
+        lng: 23.6205487,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7636183,
+        lng: 23.6218588,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7666894,
+        lng: 23.6231629,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7619255,
+        lng: 23.6172343,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7651258,
+        lng: 23.6223655,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7659479,
+        lng: 23.6206311,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7688323,
+        lng: 23.6098137,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7689771,
+        lng: 23.6123725,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7680133,
+        lng: 23.6041594,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.76897,
+        lng: 23.6134504,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7640022,
+        lng: 23.6130167,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.764145,
+        lng: 23.6195515,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.763766,
+        lng: 23.617713,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7632214,
+        lng: 23.6143359,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7636449,
+        lng: 23.6161547,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7641635,
+        lng: 23.6219555,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7635038,
+        lng: 23.6155387,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7646577,
+        lng: 23.6221775,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7646161,
+        lng: 23.6200241,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7642307,
+        lng: 23.620125,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7674808,
+        lng: 23.618214,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7638076,
+        lng: 23.6172136,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7634574,
+        lng: 23.6157577,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7643903,
+        lng: 23.6156741,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.768123,
+        lng: 23.6174495,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7646702,
+        lng: 23.6153577,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7637162,
+        lng: 23.6148184,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7679773,
+        lng: 23.6016356,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7676666,
+        lng: 23.6026838,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.769388,
+        lng: 23.5908313,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7683783,
+        lng: 23.6068982,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7706606,
+        lng: 23.61641,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.757328,
+        lng: 23.6132379,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4145906,
+        lng: 26.1846264,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7695988,
+        lng: 23.620846,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7693742,
+        lng: 23.6215589,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7698948,
+        lng: 23.6254047,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.768993,
+        lng: 23.6214957,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7693753,
+        lng: 23.6237762,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7692183,
+        lng: 23.6244044,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7695879,
+        lng: 23.6262683,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7696704,
+        lng: 23.6269846,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7688018,
+        lng: 23.6282664,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7689271,
+        lng: 23.6275044,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7683927,
+        lng: 23.6267218,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.8728338,
+        lng: 25.68199,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.9355881,
+        lng: 25.7491721,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7570825,
+        lng: 23.5548446,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7864575,
+        lng: 23.6003081,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5248995,
+        lng: 24.5127799,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4480798,
+        lng: 26.1247547,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3078992,
+        lng: 27.9586176,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3081284,
+        lng: 27.9597451,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3075558,
+        lng: 27.960932,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2829533,
+        lng: 27.9721505,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2591205,
+        lng: 27.9575399,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2594137,
+        lng: 27.9581805,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2711617,
+        lng: 27.9730696,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2811326,
+        lng: 27.9717795,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2777206,
+        lng: 27.9622786,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2784298,
+        lng: 27.9624543,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6474792,
+        lng: 25.6276437,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2868612,
+        lng: 27.9714013,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2877736,
+        lng: 27.9711465,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2820606,
+        lng: 27.9721534,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3068192,
+        lng: 27.9629588,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2574739,
+        lng: 27.957431,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2583654,
+        lng: 27.9580322,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2842124,
+        lng: 27.9708275,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2778864,
+        lng: 27.9731492,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6465723,
+        lng: 25.6286422,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4320099,
+        lng: 26.1057511,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9420426,
+        lng: 26.0228985,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7213137,
+        lng: 25.5821302,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7727305,
+        lng: 23.5890589,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4169465,
+        lng: 26.1215086,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7278774,
+        lng: 21.2361293,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7595053,
+        lng: 23.5633871,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1553193,
+        lng: 27.6196362,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5411205,
+        lng: 24.5351949,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3304241,
+        lng: 23.8077331,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.32907,
+        lng: 23.807133,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3297483,
+        lng: 23.8098206,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1953185,
+        lng: 28.6360603,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.2043144,
+        lng: 28.6087758,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3716797,
+        lng: 26.1538209,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7209555,
+        lng: 25.5852369,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7269104,
+        lng: 25.6204482,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7255292,
+        lng: 25.6033678,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7224182,
+        lng: 25.594212,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7196284,
+        lng: 25.5886249,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7231582,
+        lng: 25.5914961,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7210478,
+        lng: 25.5926936,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7182482,
+        lng: 25.5971127,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.2996828,
+        lng: 23.7945199,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3009847,
+        lng: 23.7898911,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3320962,
+        lng: 23.7977218,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3165123,
+        lng: 23.8159139,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3381207,
+        lng: 23.7809358,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4292204,
+        lng: 26.1530654,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7715961,
+        lng: 21.2436479,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730351,
+        lng: 21.209767,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75327,
+        lng: 21.206572,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763558,
+        lng: 21.293483,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.750169,
+        lng: 21.247938,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7729967,
+        lng: 21.2176043,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7410555,
+        lng: 21.214541,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75192,
+        lng: 21.240205,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755729,
+        lng: 21.204681,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.759355,
+        lng: 21.257647,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.728808,
+        lng: 21.207035,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.756566,
+        lng: 21.256025,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764533,
+        lng: 21.220262,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.759184,
+        lng: 21.242189,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.744802,
+        lng: 21.211292,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740487,
+        lng: 21.242146,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735623,
+        lng: 21.197444,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733741,
+        lng: 21.246583,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.770869,
+        lng: 21.220697,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765848,
+        lng: 21.195482,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755764,
+        lng: 21.185614,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751397,
+        lng: 21.238626,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720192,
+        lng: 21.211982,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732586,
+        lng: 21.233423,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7489755,
+        lng: 21.2031551,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720004,
+        lng: 21.236171,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755599,
+        lng: 21.182208,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754552,
+        lng: 21.211258,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.767663,
+        lng: 21.25442,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757537,
+        lng: 21.195854,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762299,
+        lng: 21.260342,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735773,
+        lng: 21.21165,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7642567,
+        lng: 21.2627268,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.778563,
+        lng: 21.236628,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7706372,
+        lng: 21.2182072,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7722003,
+        lng: 21.2165663,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.72402,
+        lng: 21.251269,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.749245,
+        lng: 21.242544,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731492,
+        lng: 21.204111,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775688,
+        lng: 21.216728,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.747322,
+        lng: 21.23729,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753433,
+        lng: 21.19962,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742754,
+        lng: 21.217138,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.766268,
+        lng: 21.244317,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757256,
+        lng: 21.301334,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.71946,
+        lng: 21.209111,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720951,
+        lng: 21.158272,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.701051,
+        lng: 21.206761,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732172,
+        lng: 21.189703,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733623,
+        lng: 21.229818,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734309,
+        lng: 21.248399,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731818,
+        lng: 21.21181,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775807,
+        lng: 21.214946,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760642,
+        lng: 21.228295,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725318,
+        lng: 21.205022,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753078,
+        lng: 21.224123,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.750105,
+        lng: 21.244314,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775514,
+        lng: 21.232933,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760611,
+        lng: 21.205985,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745191,
+        lng: 21.229787,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722166,
+        lng: 21.215463,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737806,
+        lng: 21.220055,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.769585,
+        lng: 21.222858,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729037,
+        lng: 21.203292,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.768164,
+        lng: 21.195888,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758972,
+        lng: 21.264351,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733225,
+        lng: 21.245411,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764224,
+        lng: 21.219339,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751988,
+        lng: 21.222968,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.748501,
+        lng: 21.245437,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.766352,
+        lng: 21.219605,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740053,
+        lng: 21.238954,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760881,
+        lng: 21.195471,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7760407,
+        lng: 21.2637422,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752684,
+        lng: 21.201689,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75742,
+        lng: 21.247635,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752796,
+        lng: 21.250418,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765627,
+        lng: 21.208806,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.761294,
+        lng: 21.214913,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.721046,
+        lng: 21.200834,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.738999,
+        lng: 21.209455,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732808,
+        lng: 21.247315,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732266,
+        lng: 21.240954,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75193,
+        lng: 21.242217,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731429,
+        lng: 21.208646,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725079,
+        lng: 21.205809,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.741186,
+        lng: 21.211634,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.761556,
+        lng: 21.251088,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736515,
+        lng: 21.236245,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764753,
+        lng: 21.223111,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.72971,
+        lng: 21.209959,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.748327,
+        lng: 21.244051,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720424,
+        lng: 21.225055,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734185,
+        lng: 21.240832,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75395,
+        lng: 21.213361,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754788,
+        lng: 21.233035,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.73528,
+        lng: 21.233488,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722036,
+        lng: 21.180684,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.723976,
+        lng: 21.204307,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745631,
+        lng: 21.213568,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.759772,
+        lng: 21.22127,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725569,
+        lng: 21.270211,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751423,
+        lng: 21.24189,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745108,
+        lng: 21.241313,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757272,
+        lng: 21.213826,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760279,
+        lng: 21.209395,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733696,
+        lng: 21.202126,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.770948,
+        lng: 21.218383,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734934,
+        lng: 21.250913,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724711,
+        lng: 21.250139,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754995,
+        lng: 21.238651,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732144,
+        lng: 21.260637,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730775,
+        lng: 21.254277,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.744571,
+        lng: 21.241917,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.750575,
+        lng: 21.245782,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740243,
+        lng: 21.199621,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.701619,
+        lng: 21.228157,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76896,
+        lng: 21.268435,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737488,
+        lng: 21.216497,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.743551,
+        lng: 21.241307,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742039,
+        lng: 21.217971,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746978,
+        lng: 21.219908,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757693,
+        lng: 21.235964,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730397,
+        lng: 21.228803,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.743138,
+        lng: 21.243345,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760804,
+        lng: 21.253323,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732671,
+        lng: 21.218304,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.767362,
+        lng: 21.206742,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735964,
+        lng: 21.246945,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.772539,
+        lng: 21.246329,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746405,
+        lng: 21.198057,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7711686,
+        lng: 21.222628,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.774531,
+        lng: 21.2631148,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.774134,
+        lng: 21.1927,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734345,
+        lng: 21.238864,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.744007,
+        lng: 21.249429,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.766954,
+        lng: 21.221162,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754505,
+        lng: 21.253618,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7762274,
+        lng: 21.2137033,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.728603,
+        lng: 21.180792,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.719589,
+        lng: 21.157638,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724208,
+        lng: 21.176217,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737283,
+        lng: 21.205114,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732132,
+        lng: 21.258312,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763088,
+        lng: 21.210991,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754848,
+        lng: 21.197159,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.721625,
+        lng: 21.220339,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.771155,
+        lng: 21.208615,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760264,
+        lng: 21.259561,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.739876,
+        lng: 21.225208,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.743083,
+        lng: 21.243273,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751727,
+        lng: 21.228818,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729942,
+        lng: 21.242031,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746542,
+        lng: 21.236983,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764029,
+        lng: 21.220508,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760708,
+        lng: 21.192774,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762552,
+        lng: 21.217268,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740929,
+        lng: 21.201929,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762364,
+        lng: 21.246013,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755154,
+        lng: 21.22327,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732259,
+        lng: 21.224284,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765694,
+        lng: 21.259683,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730271,
+        lng: 21.261028,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.748876,
+        lng: 21.240061,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733138,
+        lng: 21.240892,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733761,
+        lng: 21.20445,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720417,
+        lng: 21.252287,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724244,
+        lng: 21.258908,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752967,
+        lng: 21.265505,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745782,
+        lng: 21.243883,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730801,
+        lng: 21.210851,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76424,
+        lng: 21.215572,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.739806,
+        lng: 21.194666,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734566,
+        lng: 21.204747,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.717542,
+        lng: 21.2351,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735392,
+        lng: 21.220154,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752909,
+        lng: 21.243362,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757869,
+        lng: 21.250536,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742681,
+        lng: 21.222765,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775984,
+        lng: 21.224453,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.721098,
+        lng: 21.204243,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722865,
+        lng: 21.226325,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751041,
+        lng: 21.239273,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762578,
+        lng: 21.256615,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760736,
+        lng: 21.216395,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763581,
+        lng: 21.213721,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.741363,
+        lng: 21.22486,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.767673,
+        lng: 21.208016,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729373,
+        lng: 21.185141,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.702321,
+        lng: 21.212351,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732341,
+        lng: 21.203972,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.771387,
+        lng: 21.221789,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725432,
+        lng: 21.227203,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764426,
+        lng: 21.300339,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742434,
+        lng: 21.241319,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736181,
+        lng: 21.215223,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763851,
+        lng: 21.280984,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760554,
+        lng: 21.218778,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737868,
+        lng: 21.210429,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746266,
+        lng: 21.222431,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753543,
+        lng: 21.255001,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.73176,
+        lng: 21.24894,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.766012,
+        lng: 21.191881,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.768624,
+        lng: 21.210524,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762276,
+        lng: 21.255613,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746758,
+        lng: 21.237513,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7493,
+        lng: 21.189885,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.744119,
+        lng: 21.208997,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.768451,
+        lng: 21.220469,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736631,
+        lng: 21.248212,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753292,
+        lng: 21.212893,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.749051,
+        lng: 21.227223,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.72399,
+        lng: 21.212605,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732975,
+        lng: 21.208975,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729312,
+        lng: 21.18185,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722831,
+        lng: 21.202856,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76786,
+        lng: 21.228919,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729499,
+        lng: 21.214897,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746822,
+        lng: 21.237658,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735498,
+        lng: 21.239692,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.727626,
+        lng: 21.209466,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734962,
+        lng: 21.245881,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.743551,
+        lng: 21.244484,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76456,
+        lng: 21.205456,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75538,
+        lng: 21.2536,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775069,
+        lng: 21.221171,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745192,
+        lng: 21.242933,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.727791,
+        lng: 21.250674,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.756647,
+        lng: 21.223428,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.738387,
+        lng: 21.22937,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7722178,
+        lng: 21.2166042,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775032,
+        lng: 21.223086,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762899,
+        lng: 21.217734,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.776345,
+        lng: 21.231319,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732467,
+        lng: 21.235185,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752445,
+        lng: 21.218117,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.714086,
+        lng: 21.212317,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.747033,
+        lng: 21.24646,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.761786,
+        lng: 21.213667,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758626,
+        lng: 21.246746,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762519,
+        lng: 21.215535,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.741015,
+        lng: 21.218901,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.766129,
+        lng: 21.203081,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.747582,
+        lng: 21.22146,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730041,
+        lng: 21.180876,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757847,
+        lng: 21.21535,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7668361,
+        lng: 21.2105407,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75058,
+        lng: 21.242293,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751169,
+        lng: 21.192794,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720959,
+        lng: 21.225624,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775502,
+        lng: 21.2627,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722352,
+        lng: 21.20353,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733443,
+        lng: 21.200092,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.741109,
+        lng: 21.207281,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731648,
+        lng: 21.25291,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76949,
+        lng: 21.211437,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735448,
+        lng: 21.211605,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724261,
+        lng: 21.275756,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764045,
+        lng: 21.21954,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.776721,
+        lng: 21.233169,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730258,
+        lng: 21.207994,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.728101,
+        lng: 21.183215,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.699119,
+        lng: 21.217524,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.778091,
+        lng: 21.241812,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7543,
+        lng: 21.243393,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725516,
+        lng: 21.213931,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731271,
+        lng: 21.227886,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736575,
+        lng: 21.239834,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736029,
+        lng: 21.209883,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735578,
+        lng: 21.202158,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731054,
+        lng: 21.203435,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737752,
+        lng: 21.196908,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.717286,
+        lng: 21.195776,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722435,
+        lng: 21.169018,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.712187,
+        lng: 21.236157,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724415,
+        lng: 21.29186,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734279,
+        lng: 21.237486,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729171,
+        lng: 21.261811,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763665,
+        lng: 21.181554,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754049,
+        lng: 21.204783,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7617529,
+        lng: 21.2039606,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732599,
+        lng: 21.265628,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722752,
+        lng: 21.230052,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7425069,
+        lng: 21.2314149,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733395,
+        lng: 21.215198,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7688371,
+        lng: 21.2168029,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745751,
+        lng: 21.195858,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736124,
+        lng: 21.204795,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725638,
+        lng: 21.178573,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.728142,
+        lng: 21.204257,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732022,
+        lng: 21.200535,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730188,
+        lng: 21.218607,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762134,
+        lng: 21.236034,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.739156,
+        lng: 21.240072,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763017,
+        lng: 21.189683,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.77627,
+        lng: 21.212305,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75533,
+        lng: 21.188371,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.748516,
+        lng: 21.245451,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757491,
+        lng: 21.244705,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753689,
+        lng: 21.198689,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733023,
+        lng: 21.238726,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763356,
+        lng: 21.22114,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.756686,
+        lng: 21.241541,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.759072,
+        lng: 21.236151,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.759853,
+        lng: 21.248834,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733808,
+        lng: 21.218609,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7657045,
+        lng: 21.2189829,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758674,
+        lng: 21.240215,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7394736,
+        lng: 21.2322444,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.770475,
+        lng: 21.213771,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.727614,
+        lng: 21.224845,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724744,
+        lng: 21.248825,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731675,
+        lng: 21.245745,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.73372,
+        lng: 21.208798,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734509,
+        lng: 21.184437,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.721616,
+        lng: 21.233394,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760651,
+        lng: 21.265557,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752736,
+        lng: 21.250454,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762145,
+        lng: 21.24527,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746887,
+        lng: 21.200955,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731039,
+        lng: 21.231127,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740198,
+        lng: 21.240071,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735735,
+        lng: 21.200605,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.739754,
+        lng: 21.242427,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745667,
+        lng: 21.2372,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.770085,
+        lng: 21.216816,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76205,
+        lng: 21.216838,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762853,
+        lng: 21.24785,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755618,
+        lng: 21.200177,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730853,
+        lng: 21.259875,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735192,
+        lng: 21.201885,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734295,
+        lng: 21.229532,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746467,
+        lng: 21.23538,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76712,
+        lng: 21.211743,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764326,
+        lng: 21.248467,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.727183,
+        lng: 21.210614,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753326,
+        lng: 21.255087,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720591,
+        lng: 21.264508,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.738649,
+        lng: 21.241895,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737677,
+        lng: 21.201634,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.728356,
+        lng: 21.209763,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775126,
+        lng: 21.215653,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75235,
+        lng: 21.253438,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.767879,
+        lng: 21.216548,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.773015,
+        lng: 21.23188,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.777488,
+        lng: 21.218151,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731532,
+        lng: 21.221989,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.720476,
+        lng: 21.15865,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734576,
+        lng: 21.201892,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732726,
+        lng: 21.211009,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.776096,
+        lng: 21.236586,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735776,
+        lng: 21.25152,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724966,
+        lng: 21.240271,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742132,
+        lng: 21.226661,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.775301,
+        lng: 21.207383,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7502622,
+        lng: 21.2403463,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763125,
+        lng: 21.18401,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.767399,
+        lng: 21.217598,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.753657,
+        lng: 21.227551,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.774962,
+        lng: 21.234525,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.766974,
+        lng: 21.223188,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.754005,
+        lng: 21.251864,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7628662,
+        lng: 21.2440924,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75556,
+        lng: 21.249168,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746622,
+        lng: 21.239983,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758763,
+        lng: 21.202044,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755139,
+        lng: 21.214796,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.761959,
+        lng: 21.235088,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724711,
+        lng: 21.250309,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.741328,
+        lng: 21.224769,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.776545,
+        lng: 21.205784,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.718208,
+        lng: 21.204006,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737011,
+        lng: 21.203462,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.756538,
+        lng: 21.209458,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7486844,
+        lng: 21.2149729,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734221,
+        lng: 21.25008,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7760208,
+        lng: 21.2396832,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765173,
+        lng: 21.216154,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745119,
+        lng: 21.208655,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722017,
+        lng: 21.249349,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.735994,
+        lng: 21.187675,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729997,
+        lng: 21.205713,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.744704,
+        lng: 21.240005,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733178,
+        lng: 21.253046,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758993,
+        lng: 21.228172,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730695,
+        lng: 21.235546,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762765,
+        lng: 21.211147,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.769726,
+        lng: 21.215995,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763308,
+        lng: 21.239962,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764039,
+        lng: 21.2241203,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.776449,
+        lng: 21.218209,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.722718,
+        lng: 21.210398,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765634,
+        lng: 21.248854,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760452,
+        lng: 21.205895,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763012,
+        lng: 21.22266,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.73124,
+        lng: 21.213251,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.725678,
+        lng: 21.225613,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.776926,
+        lng: 21.211721,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752567,
+        lng: 21.2263,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765038,
+        lng: 21.249642,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742049,
+        lng: 21.21801,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.749754,
+        lng: 21.243023,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765109,
+        lng: 21.214015,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731609,
+        lng: 21.236386,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760392,
+        lng: 21.258433,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736585,
+        lng: 21.199509,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732643,
+        lng: 21.20031,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.768486,
+        lng: 21.224371,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.738658,
+        lng: 21.211082,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733737,
+        lng: 21.231793,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757148,
+        lng: 21.222223,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.741983,
+        lng: 21.214847,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763014,
+        lng: 21.212514,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.757865,
+        lng: 21.209167,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.737084,
+        lng: 21.246119,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729462,
+        lng: 21.20212,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.742593,
+        lng: 21.210198,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7668218,
+        lng: 21.1951348,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.751321,
+        lng: 21.18227,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.732375,
+        lng: 21.210084,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.772066,
+        lng: 21.206308,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762395,
+        lng: 21.237715,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.765763,
+        lng: 21.215401,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.731187,
+        lng: 21.262164,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.721261,
+        lng: 21.236808,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7475534,
+        lng: 21.2293596,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.728784,
+        lng: 21.228115,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.75531,
+        lng: 21.192055,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.762947,
+        lng: 21.25629,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.777078,
+        lng: 21.220764,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.755691,
+        lng: 21.212447,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7453399,
+        lng: 21.2753182,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.778078,
+        lng: 21.24132,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.74486,
+        lng: 21.199682,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.769106,
+        lng: 21.212916,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763211,
+        lng: 21.188108,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.752569,
+        lng: 21.199204,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.74526,
+        lng: 21.201996,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.749732,
+        lng: 21.253075,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.727994,
+        lng: 21.181455,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.745849,
+        lng: 21.245571,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.724806,
+        lng: 21.234866,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7803,
+        lng: 21.235422,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730788,
+        lng: 21.233971,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.747813,
+        lng: 21.212062,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.723584,
+        lng: 21.208302,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.760231,
+        lng: 21.183523,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.734827,
+        lng: 21.199566,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736954,
+        lng: 21.198187,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740673,
+        lng: 21.22735,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758382,
+        lng: 21.199212,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.746008,
+        lng: 21.216928,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.76098,
+        lng: 21.258149,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.774639,
+        lng: 21.230208,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7584177,
+        lng: 21.2069675,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.758998,
+        lng: 21.254009,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.740011,
+        lng: 21.207931,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7453891,
+        lng: 21.2628219,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7515593,
+        lng: 21.2634194,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7534803,
+        lng: 21.263593,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7576879,
+        lng: 21.2640728,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.718036,
+        lng: 21.209626,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730601,
+        lng: 21.202709,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763662,
+        lng: 21.195023,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.773494,
+        lng: 21.22639,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.729724,
+        lng: 21.221444,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.736315,
+        lng: 21.232799,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.764348,
+        lng: 21.253091,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.733969,
+        lng: 21.247235,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.726101,
+        lng: 21.221221,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7778611,
+        lng: 21.2242202,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7786011,
+        lng: 21.2281496,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.74006,
+        lng: 21.196276,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.73888,
+        lng: 21.196679,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7812404,
+        lng: 23.6369097,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6649318,
+        lng: 25.5062453,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7508117,
+        lng: 23.6046829,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.1059692,
+        lng: 26.8271248,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.1069908,
+        lng: 26.8254891,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4134253,
+        lng: 26.1856924,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7809867,
+        lng: 21.2449941,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7665575,
+        lng: 21.2348396,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6532039,
+        lng: 21.1724366,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7494566,
+        lng: 21.2120227,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.9167364,
+        lng: 26.3838864,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5478582,
+        lng: 24.5680441,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6183001,
+        lng: 25.479666,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1948113,
+        lng: 23.0576899,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.5077943,
+        lng: 25.5753297,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5814616,
+        lng: 25.0534921,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3962375,
+        lng: 21.2254305,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3899608,
+        lng: 21.2235427,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3811663,
+        lng: 26.1683945,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3800205,
+        lng: 26.166476,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.942817,
+        lng: 26.0218102,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7110907,
+        lng: 24.4268602,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.1926535,
+        lng: 23.0593292,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5354911,
+        lng: 26.0920951,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8406497,
+        lng: 26.2430235,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8682308,
+        lng: 26.1974506,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8736445,
+        lng: 26.1887442,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8753775,
+        lng: 26.1872983,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8720294,
+        lng: 26.1775422,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.8725095,
+        lng: 26.1665759,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1453639,
+        lng: 28.6196718,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.9307556,
+        lng: 26.1221736,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.0734204,
+        lng: 23.564837,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6469009,
+        lng: 25.5895663,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.646888,
+        lng: 25.5895363,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.646868,
+        lng: 25.5895064,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.656277,
+        lng: 25.601354,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6562888,
+        lng: 25.6013542,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6563029,
+        lng: 25.6013545,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3888541,
+        lng: 26.1169261,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6330057,
+        lng: 25.6043267,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7900384,
+        lng: 24.2086411,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3808746,
+        lng: 26.1663386,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7716381,
+        lng: 21.2359688,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.665543,
+        lng: 25.6030606,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6656112,
+        lng: 25.6022109,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.0374186,
+        lng: 21.6852296,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4487573,
+        lng: 26.0826571,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7818824,
+        lng: 21.2790693,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.1688881,
+        lng: 21.3181076,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7032862,
+        lng: 21.2345579,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.730936,
+        lng: 21.1880659,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.757608,
+        lng: 23.5514134,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3181845,
+        lng: 23.8320358,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3193971,
+        lng: 23.8313399,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3200721,
+        lng: 23.8328359,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3210676,
+        lng: 23.8329385,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3222199,
+        lng: 23.8311307,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3212057,
+        lng: 23.8263584,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3204866,
+        lng: 23.8207375,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.322544,
+        lng: 23.8191972,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3222182,
+        lng: 23.820258,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3223614,
+        lng: 23.8212216,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3217042,
+        lng: 23.8217202,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3217526,
+        lng: 23.820316,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3178974,
+        lng: 23.8139847,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.780491,
+        lng: 23.6373852,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.324393,
+        lng: 23.7764579,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3251452,
+        lng: 23.7776287,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7881856,
+        lng: 23.61363,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7723089,
+        lng: 21.2381226,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3599664,
+        lng: 25.5533102,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7546166,
+        lng: 23.5784142,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5303324,
+        lng: 24.5466388,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5351082,
+        lng: 24.5951043,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3213281,
+        lng: 23.8237577,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3207437,
+        lng: 23.8227585,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7570395,
+        lng: 23.5445972,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4814389,
+        lng: 26.0432695,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4871787,
+        lng: 26.0466811,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4871649,
+        lng: 26.0467056,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4871582,
+        lng: 26.0466554,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7734322,
+        lng: 23.597575,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7547607,
+        lng: 23.5548812,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7542118,
+        lng: 23.5542807,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4315476,
+        lng: 26.11589,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7743097,
+        lng: 21.2454544,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4929881,
+        lng: 26.0627451,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3411857,
+        lng: 23.7750155,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7562671,
+        lng: 23.5842085,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7559245,
+        lng: 23.5847146,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7988838,
+        lng: 23.6113006,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2181043,
+        lng: 26.712236,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3281135,
+        lng: 23.7810774,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3282181,
+        lng: 23.7856399,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3284339,
+        lng: 23.7820323,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3292647,
+        lng: 23.7824883,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3287601,
+        lng: 23.7851262,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3293108,
+        lng: 23.7843068,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3298941,
+        lng: 23.7836041,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5711568,
+        lng: 26.9040354,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3271693,
+        lng: 23.7912598,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3267982,
+        lng: 23.787673,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.329253,
+        lng: 23.7900035,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3336581,
+        lng: 23.7930914,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3311364,
+        lng: 23.791467,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3304485,
+        lng: 23.7905201,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7786389,
+        lng: 23.5874271,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7677352,
+        lng: 23.6357287,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5711397,
+        lng: 26.9040501,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5711482,
+        lng: 26.9040428,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3072644,
+        lng: 23.8171142,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3076891,
+        lng: 23.8181622,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7772899,
+        lng: 23.5933963,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7773368,
+        lng: 23.5962907,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7630144,
+        lng: 23.5883196,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7415258,
+        lng: 23.535823,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3619398,
+        lng: 26.1510119,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3676806,
+        lng: 26.1515084,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7657023,
+        lng: 23.5707791,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7628675,
+        lng: 23.5560454,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3829308,
+        lng: 26.1008218,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.8714749,
+        lng: 22.9328222,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.8730529,
+        lng: 22.9191077,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7537642,
+        lng: 23.5858031,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.365936,
+        lng: 25.8005542,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3631281,
+        lng: 25.795929,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3648016,
+        lng: 25.801911,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.4905109,
+        lng: 26.0648964,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5016899,
+        lng: 26.0657334,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3671887,
+        lng: 25.8017505,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3610193,
+        lng: 25.8119024,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.534235,
+        lng: 26.0970438,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.5342419,
+        lng: 26.0969612,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7535251,
+        lng: 23.5429422,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3652478,
+        lng: 25.8103603,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7835986,
+        lng: 24.6991128,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7820273,
+        lng: 24.6978262,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7826817,
+        lng: 24.7008041,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7630679,
+        lng: 21.3039574,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.763531,
+        lng: 21.2939635,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7862438,
+        lng: 23.6051425,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.0823168,
+        lng: 23.5631181,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3304926,
+        lng: 28.1914395,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3305086,
+        lng: 28.1914053,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3305252,
+        lng: 28.1913672,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2544809,
+        lng: 27.955434,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2543562,
+        lng: 27.9555278,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.254418,
+        lng: 27.9553711,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2577561,
+        lng: 27.9580463,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2584089,
+        lng: 27.9580703,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.257762,
+        lng: 27.9580358,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2584165,
+        lng: 27.9580535,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2594139,
+        lng: 27.9581914,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2595923,
+        lng: 27.9580802,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2613227,
+        lng: 27.958258,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2602105,
+        lng: 27.9581663,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2604975,
+        lng: 27.9582095,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2617763,
+        lng: 27.958329,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2633784,
+        lng: 27.9577382,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2643862,
+        lng: 27.9577641,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2641755,
+        lng: 27.955687,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.264122,
+        lng: 27.9556294,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.264139,
+        lng: 27.9568692,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2665573,
+        lng: 27.9568279,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2675598,
+        lng: 27.9560072,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2669627,
+        lng: 27.9562608,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2696438,
+        lng: 27.9554595,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2683474,
+        lng: 27.9548858,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2687958,
+        lng: 27.9542489,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2701568,
+        lng: 27.9546422,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2708655,
+        lng: 27.953474,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2702163,
+        lng: 27.9527237,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2682706,
+        lng: 27.9516721,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.267464,
+        lng: 27.9503795,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2662619,
+        lng: 27.9496386,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2654294,
+        lng: 27.9497898,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2657562,
+        lng: 27.9522372,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2655566,
+        lng: 27.9515991,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2660291,
+        lng: 27.9545546,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2662371,
+        lng: 27.9559696,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2653028,
+        lng: 27.9545764,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2654216,
+        lng: 27.9553325,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2658507,
+        lng: 27.9551919,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2663484,
+        lng: 27.9555319,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2669837,
+        lng: 27.9551639,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2664854,
+        lng: 27.953345,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2674475,
+        lng: 27.9532955,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2666837,
+        lng: 27.9516984,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2631708,
+        lng: 27.955615,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2632738,
+        lng: 27.9565344,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.26265,
+        lng: 27.9568658,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2605594,
+        lng: 27.9564993,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2594268,
+        lng: 27.9551556,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2590593,
+        lng: 27.9551195,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2576557,
+        lng: 27.9546126,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2586483,
+        lng: 27.9565702,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2571938,
+        lng: 27.9564791,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2575674,
+        lng: 27.9574451,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2576323,
+        lng: 27.9583564,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2574308,
+        lng: 27.9587692,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2571513,
+        lng: 27.9591949,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2571649,
+        lng: 27.9586254,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2612973,
+        lng: 27.9616615,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.259405,
+        lng: 27.9620884,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2597084,
+        lng: 27.961974,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2611924,
+        lng: 27.9617757,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2617652,
+        lng: 27.9611621,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2622295,
+        lng: 27.960608,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2629725,
+        lng: 27.9597133,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2630574,
+        lng: 27.9595344,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2639485,
+        lng: 27.9594701,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2648936,
+        lng: 27.958903,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2653564,
+        lng: 27.9587488,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2784368,
+        lng: 27.9625664,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2774268,
+        lng: 27.964904,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2774596,
+        lng: 27.9650036,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2773284,
+        lng: 27.9656975,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2760185,
+        lng: 27.9659475,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2763478,
+        lng: 27.9649418,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2767475,
+        lng: 27.9643419,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2770632,
+        lng: 27.9637153,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2777155,
+        lng: 27.9621292,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2778969,
+        lng: 27.9615629,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.279261,
+        lng: 27.9609092,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2781479,
+        lng: 27.9599933,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2788203,
+        lng: 27.9597004,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.279865,
+        lng: 27.9571298,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.279589,
+        lng: 27.9560984,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2802553,
+        lng: 27.9561379,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.28171,
+        lng: 27.9576814,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2823794,
+        lng: 27.9573387,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2825836,
+        lng: 27.958227,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2834434,
+        lng: 27.9578879,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.283443,
+        lng: 27.9587165,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2842678,
+        lng: 27.9579141,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2849944,
+        lng: 27.9585008,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2847845,
+        lng: 27.960111,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2853712,
+        lng: 27.9610378,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2658281,
+        lng: 27.9604318,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2671913,
+        lng: 27.9629054,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7434184,
+        lng: 23.4841176,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2664486,
+        lng: 27.9630917,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2676165,
+        lng: 27.965173,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2682515,
+        lng: 27.9652818,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2668582,
+        lng: 27.9660262,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2664656,
+        lng: 27.9661965,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2651655,
+        lng: 27.9667342,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2652058,
+        lng: 27.9671955,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2642669,
+        lng: 27.9680179,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2640491,
+        lng: 27.9674053,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2635624,
+        lng: 27.9663893,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2631157,
+        lng: 27.9662729,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2625847,
+        lng: 27.9654297,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.260711,
+        lng: 27.9631433,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2543486,
+        lng: 27.9555356,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.7447315,
+        lng: 23.4877957,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2559133,
+        lng: 27.959552,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.259158,
+        lng: 27.9574758,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2709292,
+        lng: 27.9552028,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.270794,
+        lng: 27.9520375,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2707777,
+        lng: 27.95204,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2688007,
+        lng: 27.9507963,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2702893,
+        lng: 27.9514215,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2680913,
+        lng: 27.9537694,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2645851,
+        lng: 27.9521972,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2560523,
+        lng: 27.9589831,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2563283,
+        lng: 27.9602876,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2569007,
+        lng: 27.9611214,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2572556,
+        lng: 27.961386,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2583649,
+        lng: 27.9623503,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2586739,
+        lng: 27.9629894,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.259042,
+        lng: 27.9641169,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2600225,
+        lng: 27.9649538,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2613033,
+        lng: 27.9667536,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2612455,
+        lng: 27.9669026,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2616253,
+        lng: 27.9675809,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2619357,
+        lng: 27.9676055,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2641729,
+        lng: 27.9677001,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.26695,
+        lng: 27.967853,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2663131,
+        lng: 27.9680962,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2659819,
+        lng: 27.9684315,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.265489,
+        lng: 27.9690474,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2654296,
+        lng: 27.969658,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2673184,
+        lng: 27.9678559,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2681695,
+        lng: 27.9671926,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2683357,
+        lng: 27.9673752,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2723063,
+        lng: 27.9645711,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2730541,
+        lng: 27.9655672,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2701319,
+        lng: 27.9663702,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2727467,
+        lng: 27.9650797,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2729638,
+        lng: 27.9650378,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2730462,
+        lng: 27.9652147,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2731946,
+        lng: 27.9652295,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2707036,
+        lng: 27.9649384,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2706933,
+        lng: 27.9644197,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.26872,
+        lng: 27.9652031,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2680617,
+        lng: 27.9654894,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2680839,
+        lng: 27.9652952,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2675778,
+        lng: 27.9648641,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2662204,
+        lng: 27.9627313,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2668423,
+        lng: 27.9580766,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2673341,
+        lng: 27.957852,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2680789,
+        lng: 27.9576351,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2707351,
+        lng: 27.958805,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2688905,
+        lng: 27.9573656,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2696007,
+        lng: 27.9572148,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2705742,
+        lng: 27.9573858,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2708205,
+        lng: 27.9593149,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2594554,
+        lng: 27.9602925,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2605495,
+        lng: 27.9606167,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2797618,
+        lng: 27.960019,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2806513,
+        lng: 27.9605557,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2817388,
+        lng: 27.9611652,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2820367,
+        lng: 27.9607677,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.280393,
+        lng: 27.9593838,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2800801,
+        lng: 27.9585208,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2881307,
+        lng: 27.9664632,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2881915,
+        lng: 27.9677602,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2879067,
+        lng: 27.9694775,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2728255,
+        lng: 27.9571502,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2721771,
+        lng: 27.9556756,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2601781,
+        lng: 27.9630166,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.757262,
+        lng: 23.5598589,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.303853,
+        lng: 27.9661339,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3076676,
+        lng: 27.9608405,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3083661,
+        lng: 27.9597179,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3070217,
+        lng: 27.9572397,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.306696,
+        lng: 27.9586531,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.306527,
+        lng: 27.9604372,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3061156,
+        lng: 27.9597758,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3059159,
+        lng: 27.960459,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3052716,
+        lng: 27.9620219,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3051787,
+        lng: 27.9614397,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3040876,
+        lng: 27.9626984,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.303361,
+        lng: 27.9650911,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3039291,
+        lng: 27.963147,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3043301,
+        lng: 27.9630422,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3045001,
+        lng: 27.9636423,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3039762,
+        lng: 27.9648434,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3034156,
+        lng: 27.9646071,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3039141,
+        lng: 27.9646818,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3023891,
+        lng: 27.9644328,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3026573,
+        lng: 27.9663775,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3024249,
+        lng: 27.9636649,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2992062,
+        lng: 27.9650433,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3015756,
+        lng: 27.9645376,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3010318,
+        lng: 27.9647304,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3012681,
+        lng: 27.9658792,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2998897,
+        lng: 27.9650867,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2995679,
+        lng: 27.9660293,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3000558,
+        lng: 27.965958,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.3018748,
+        lng: 27.965859,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2573254,
+        lng: 27.9588636,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2664176,
+        lng: 27.9518985,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2670207,
+        lng: 27.9556659,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2624477,
+        lng: 27.9650963,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2707633,
+        lng: 27.9665044,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2605521,
+        lng: 27.961014,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7199766,
+        lng: 21.2843277,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2510905,
+        lng: 27.9532544,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2505239,
+        lng: 27.9504735,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2513859,
+        lng: 27.953555,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2506096,
+        lng: 27.9528138,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2512193,
+        lng: 27.9508259,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2508548,
+        lng: 27.9518556,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2504252,
+        lng: 27.9487951,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.251505,
+        lng: 27.9482657,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2497978,
+        lng: 27.9501147,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.250072,
+        lng: 27.9493895,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2503906,
+        lng: 27.9487343,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2520317,
+        lng: 27.9493142,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2501976,
+        lng: 27.9491631,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2517317,
+        lng: 27.9486192,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2505443,
+        lng: 27.9482417,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2511419,
+        lng: 27.9479864,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2521553,
+        lng: 27.9484666,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2517165,
+        lng: 27.9474348,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2495038,
+        lng: 27.9516393,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2492251,
+        lng: 27.9515547,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2486265,
+        lng: 27.9508159,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2474631,
+        lng: 27.9500665,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2470026,
+        lng: 27.9496426,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.246421,
+        lng: 27.9485205,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2459718,
+        lng: 27.9484613,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2460268,
+        lng: 27.9477443,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2463693,
+        lng: 27.94723,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2466323,
+        lng: 27.9465069,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2469003,
+        lng: 27.9482882,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2487563,
+        lng: 27.9456076,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2487617,
+        lng: 27.9452003,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2467955,
+        lng: 27.9435036,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2459972,
+        lng: 27.9436197,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2450899,
+        lng: 27.944839,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2454957,
+        lng: 27.9434802,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2444438,
+        lng: 27.9447583,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2449786,
+        lng: 27.9432707,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2440005,
+        lng: 27.9429494,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2445216,
+        lng: 27.9431723,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2437791,
+        lng: 27.9422663,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2437342,
+        lng: 27.9425107,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2422477,
+        lng: 27.9429629,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2423684,
+        lng: 27.943465,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2418393,
+        lng: 27.9448228,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2410209,
+        lng: 27.9447532,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2402792,
+        lng: 27.9453497,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2410745,
+        lng: 27.9457104,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.242445,
+        lng: 27.9484156,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2433839,
+        lng: 27.9486642,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2435166,
+        lng: 27.9496962,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.244221,
+        lng: 27.9487449,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.24979,
+        lng: 27.9534631,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2494173,
+        lng: 27.9542681,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2451276,
+        lng: 27.949711,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2456688,
+        lng: 27.9497437,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2470386,
+        lng: 27.9509224,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2466934,
+        lng: 27.9508241,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2495049,
+        lng: 27.9539201,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2509854,
+        lng: 27.9547891,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2510396,
+        lng: 27.9561205,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2518409,
+        lng: 27.9557425,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2503208,
+        lng: 27.9554132,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2511102,
+        lng: 27.9570913,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2504274,
+        lng: 27.9582438,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2506448,
+        lng: 27.9587566,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2516132,
+        lng: 27.9576036,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.4256449,
+        lng: 28.0437989,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2503552,
+        lng: 27.9375141,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2499686,
+        lng: 27.9371429,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2499289,
+        lng: 27.9370714,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2524136,
+        lng: 27.9575115,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2526803,
+        lng: 27.9587501,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2535992,
+        lng: 27.9574408,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2539322,
+        lng: 27.9566068,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2497468,
+        lng: 27.9381441,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2492415,
+        lng: 27.9396123,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.250666,
+        lng: 27.9388312,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2515022,
+        lng: 27.9385237,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2520272,
+        lng: 27.9392316,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2514277,
+        lng: 27.9399453,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2508601,
+        lng: 27.9394485,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2491055,
+        lng: 27.9364265,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2486857,
+        lng: 27.9366677,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2477816,
+        lng: 27.9365238,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2472722,
+        lng: 27.9359421,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2475505,
+        lng: 27.9356771,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2475717,
+        lng: 27.9356753,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2468672,
+        lng: 27.9346227,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2460978,
+        lng: 27.9343212,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2445639,
+        lng: 27.9330509,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.245893,
+        lng: 27.934603,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2441496,
+        lng: 27.9331722,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2647279,
+        lng: 27.9712755,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2475617,
+        lng: 27.9397871,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2531221,
+        lng: 27.9487547,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2531448,
+        lng: 27.9498622,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2507968,
+        lng: 27.9415402,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2498453,
+        lng: 27.9405551,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2490193,
+        lng: 27.9397983,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2480755,
+        lng: 27.9391756,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2460504,
+        lng: 27.9385302,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2451194,
+        lng: 27.9362669,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2442899,
+        lng: 27.9366977,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2455104,
+        lng: 27.9378951,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2465766,
+        lng: 27.9378335,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2481647,
+        lng: 27.9407912,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2490264,
+        lng: 27.9408859,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2510982,
+        lng: 27.9427814,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1812588,
+        lng: 28.6512763,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.181012,
+        lng: 28.6509547,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1812513,
+        lng: 28.6512629,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1810439,
+        lng: 28.6510643,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1812898,
+        lng: 28.6512754,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.5528657,
+        lng: 22.5680423,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2779645,
+        lng: 27.9729598,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2788286,
+        lng: 27.9731407,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2802528,
+        lng: 27.9726752,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.281235,
+        lng: 27.9728385,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2820497,
+        lng: 27.9724765,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2831703,
+        lng: 27.97201,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2811841,
+        lng: 27.9715424,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2841202,
+        lng: 27.970873,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2847324,
+        lng: 27.9708173,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2797268,
+        lng: 27.9716162,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2439678,
+        lng: 27.946647,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2439756,
+        lng: 27.9459723,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2431705,
+        lng: 27.9455646,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2423199,
+        lng: 27.9452276,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2424541,
+        lng: 27.9407587,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.243198,
+        lng: 27.9418202,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2435843,
+        lng: 27.9410096,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2429115,
+        lng: 27.9405948,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.2426281,
+        lng: 27.9412901,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1810019,
+        lng: 28.6513802,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1808896,
+        lng: 28.65128,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1808945,
+        lng: 28.6513244,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1808717,
+        lng: 28.6512881,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1901794,
+        lng: 28.6409057,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1812542,
+        lng: 28.650693,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1906337,
+        lng: 28.6411335,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.1822068,
+        lng: 28.6505207,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6797339,
+        lng: 25.6032738,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6796528,
+        lng: 25.6019125,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6814614,
+        lng: 25.6035268,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6816687,
+        lng: 25.6002771,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.681828,
+        lng: 25.600323,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6799986,
+        lng: 25.6000601,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6805572,
+        lng: 25.6001512,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6803455,
+        lng: 25.6023861,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6776979,
+        lng: 25.6011105,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6784952,
+        lng: 25.6021597,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6784891,
+        lng: 25.6022015,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.679825,
+        lng: 25.6023048,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.1383772,
+        lng: 26.8550468,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3628729,
+        lng: 25.7913838,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3627457,
+        lng: 25.7919996,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3621396,
+        lng: 25.794054,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.6461707,
+        lng: 26.2624215,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3613111,
+        lng: 25.7947428,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3636665,
+        lng: 25.8050698,
+        title: 'Recycle Station'
+      }, {
+        lat: 46.3583711,
+        lng: 25.797589,
+        title: 'Recycle Station'
+      }, {
+        lat: 44.3879186,
+        lng: 26.1209244,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.7684238,
+        lng: 21.256398,
+        title: 'Recycle Station'
+      }, {
+        lat: 47.2108478,
+        lng: 27.2658881,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6745053,
+        lng: 25.5982563,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6745084,
+        lng: 25.5987913,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6751364,
+        lng: 25.5977589,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6751236,
+        lng: 25.5979613,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6752976,
+        lng: 25.6121713,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6754511,
+        lng: 25.6104617,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6753451,
+        lng: 25.6115887,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6753907,
+        lng: 25.6109621,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6754993,
+        lng: 25.6098776,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6742538,
+        lng: 25.6100207,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6742514,
+        lng: 25.6100885,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6738924,
+        lng: 25.6099571,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.673889,
+        lng: 25.6100354,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6741713,
+        lng: 25.6110203,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6741587,
+        lng: 25.6111167,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.675936,
+        lng: 25.6113274,
+        title: 'Recycle Station'
+      }, {
+        lat: 45.6759822,
+        lng: 25.6107423,
+        title: 'Recycle Station'
+      }, ];
+
+      function initMap() {
+        const mapOptions = {
+          center: {
+            lat: 45.9432,
+            lng: 24.9668
+          }, // Center the map somewhere in Romania
+          zoom: 6,
+        };
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        coordinates.forEach(coord => {
+          new google.maps.Marker({
+            position: coord,
+            map,
+            title: coord.title,
+          });
+        });
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map" style="height: 400px;"></div>
+  </body>
+
+</html>
