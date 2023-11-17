@@ -1097,6 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterText: {fileID: 1190631864}
+  counter: 0
 --- !u!1 &1987171318
 GameObject:
   m_ObjectHideFlags: 0

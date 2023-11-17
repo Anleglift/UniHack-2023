@@ -19,7 +19,7 @@ public class LocationTracker : MonoBehaviour
 
     void StartLocationService()
     {
-        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity2d.player.UnityPlayer");
+        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         locationService = new AndroidJavaObject("net.gree.GameBoosters.UniHack2023.LocationService");
         currentActivity.Call("startForegroundService", new AndroidJavaObject("android.content.Intent", currentActivity, locationService));
