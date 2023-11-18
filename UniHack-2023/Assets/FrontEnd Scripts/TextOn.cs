@@ -5,12 +5,11 @@ using UnityEngine.UI;
 public class TextOn : MonoBehaviour
 {
     public GameObject textLayer; // Reference to the text layer under the button
-    private bool textVisible = false;
+    public bool textVisible = false;
     private float textHeight;
     private RectTransform textLayerRectTransform;
     private RectTransform buttonRectTransform;
     private RectTransform parentRectTransform; // Reference to the parent object containing all buttons
-
     void Start()
     {
         textLayerRectTransform = textLayer.GetComponent<RectTransform>();
