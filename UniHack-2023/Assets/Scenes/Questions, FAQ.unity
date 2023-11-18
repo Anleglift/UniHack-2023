@@ -2229,12 +2229,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Principalele scopuri ale TBD sunt de a atrage aten\u021Bia publicului
-    asupra pericolului cauzat de gestionarea incorect\u0103 a de\u0219eurilor prin
-    a ajuta utilizatorul s\u0103 le gestioneze corect \u0219i  asupra distan\u021Bei
-    parcurse cu un automobil fa\u021B\u0103 de distan\u021Ba parcurs\u0103 merg\xE2nd,
-    f\u0103r\u0103 arderea continu\u0103 de combustibil \u0219i, respectiv emiterea
-    de gaze d\u0103un\u0103toare mediului."
+  m_text: "    Principalele scopuri ale aplicaiei noastre, R&T - Recycling & Tracking,
+    sunt de a atrage aten\u021Bia publicului asupra pericolului cauzat de gestionarea
+    incorect\u0103 a de\u0219eurilor prin a ajuta utilizatorul s\u0103 le gestioneze
+    corect \u0219i  asupra distan\u021Bei parcurse cu un automobil fa\u021B\u0103
+    de distan\u021Ba parcurs\u0103 merg\xE2nd, f\u0103r\u0103 arderea continu\u0103
+    de combustibil \u0219i, respectiv emiterea de gaze d\u0103un\u0103toare mediului."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -17.886139}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3166,8 +3166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0021667, y: -621.09}
-  m_SizeDelta: {x: 706.28, y: 182.18}
+  m_AnchoredPosition: {x: 0.0021667, y: -618}
+  m_SizeDelta: {x: 706.28, y: 189.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120154418
 MonoBehaviour:

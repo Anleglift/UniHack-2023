@@ -34,12 +34,11 @@ public class Scroll : MonoBehaviour
 
     void Update()
     {
-
-        // Get the vertical scroll input from the mouse wheel
-        float scrollInput = -Input.GetAxis("Mouse ScrollWheel");
-
-        // Scroll the content vertically
-        ScrollContent(scrollInput);
+        if (Input.touchCount > 0)
+        {
+            float scrollInput = -Input.GetTouch(0).deltaPosition.y;
+            ScrollContent(scrollInput);
+        }
     }
 
     void ScrollContent(float scrollInput)
