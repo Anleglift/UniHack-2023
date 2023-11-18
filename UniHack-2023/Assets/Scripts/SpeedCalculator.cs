@@ -9,7 +9,6 @@ public class SpeedCalculator : MonoBehaviour
     public float longitude1;
     public float longitude2;
     public TextMeshProUGUI text;
-    // Start is called before the first frame update
     void Start()
     {
         Invoke("GetInitialPositions", 2f);
@@ -35,16 +34,15 @@ public class SpeedCalculator : MonoBehaviour
 
         if (speed == 0)
         {
-            text.text = "Same vicinity";
+            text.text = "Status: Same vicinity";
         }
         else if (speed > 0 && speed <= 10) {
-            text.text = "Walking";
+            text.text = "Status: Walking";
         }
         else if (speed > 10)
         {
-            text.text = "Driving";
+            text.text = "Status: Driving";
         }
-        text.text = "Speed: " + speed.ToString() + " m/s";
         latitude2 = latitude1;
         longitude2 = longitude1;
     }

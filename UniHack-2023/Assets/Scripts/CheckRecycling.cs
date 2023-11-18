@@ -1469,6 +1469,7 @@ public class CheckRecycling : MonoBehaviour
         coordinateList.Add(new Coordinates(45.6741587, 25.6111167));
         coordinateList.Add(new Coordinates(45.675936, 25.6113274));
         coordinateList.Add(new Coordinates(45.6759822, 25.6107423));
+        coordinateList.Add(new Coordinates(45.763789, 21.223834));
     }
     public void CheckLocation()
     {
@@ -1485,11 +1486,11 @@ public class CheckRecycling : MonoBehaviour
         }
         if (ok == 1)
         {
-            Recycled.text = "Good job recycling! :)";
+            Recycled.text = "Good job recycling!Your bonus has been added to your account! :)";
         }
         else
         {
-            Recycled.text = "Recycling bin not detected,we are sorry :(";
+            Recycled.text = "Recycling location not detected, please try to get closer to the intended location!";
         }
     }
     // Update is called once per frame
