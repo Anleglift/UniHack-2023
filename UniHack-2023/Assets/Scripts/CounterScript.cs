@@ -18,6 +18,6 @@ public class CounterScript : MonoBehaviour
         // Generate a random number between 1 and 10 (inclusive).
         int randomNumber = Random.Range(1, 11);
         sum = sum + randomNumber;
-        text.text = sum.ToString() + "items";
+        text.text = sum.ToString() + " items";
     }
 }
