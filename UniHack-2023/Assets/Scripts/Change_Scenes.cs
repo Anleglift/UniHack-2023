@@ -13,8 +13,6 @@ public class Change_Scenes : MonoBehaviour
     private float elapsedTime = 0f;
     private bool isLerping = false;
 
-    public GameObject SampleWebView;
-
     public GameObject Map_Icon;
     public GameObject Home_Icon;
     public GameObject FAQ_Icon;
@@ -40,7 +38,6 @@ public class Change_Scenes : MonoBehaviour
         FAQ_Icon.SetActive(true);
         other.SetActive(false);
         LoadingScrene.SetActive(true);
-        SampleWebView.SetActive(false);
         StartLerping();
         Invoke("Change_Scene_FAQ", 2f);
     }
@@ -55,7 +52,6 @@ public class Change_Scenes : MonoBehaviour
         FAQ_Icon.SetActive(false);
         other.SetActive(false);
         LoadingScrene.SetActive(true);
-        SampleWebView.SetActive(false);
         StartLerping();
         Invoke("Change_Scene_Home", 2f);
     }
