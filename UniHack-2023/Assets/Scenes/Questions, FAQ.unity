@@ -180,10 +180,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cum putem s\u0103 ne sc\u0103dem amprenta de carbon?"
+  m_text: How can we reduce our carbon footprint?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -207,13 +207,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 136.8024, y: 0, z: 178.60321, w: 0}
+  m_margin: {x: 133.06503, y: 0, z: 148.70483, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -291,8 +291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_SizeDelta: {x: -0.00012207, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178667049
 MonoBehaviour:
@@ -314,10 +314,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\xE2t de grav\u0103 e problema de\u0219eurilor aruncate necorespunz\u0103tor?\r\n"
+  m_text: How serious is the problem of improper waste disposal?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -341,13 +341,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 125.40222, y: 0, z: 193.80338, w: 0}
+  m_margin: {x: 121.66495, y: 0, z: 145.21826, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -486,7 +486,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2120154417}
-  - {fileID: 1546840090}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -529,7 +528,7 @@ MonoBehaviour:
   canvasRect: {fileID: 242025506}
   canvas: {fileID: 242025501}
   cam: {fileID: 1401547489}
-  scrollSpeed: 350
+  scrollSpeed: 1
   minYPosition: 0
   maxYPosition: 0
   minim: 0
@@ -611,10 +610,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1174742633}
+  - {fileID: 920819360}
   - {fileID: 316583179}
+  - {fileID: 1316077562}
   - {fileID: 1054034304}
+  - {fileID: 773973339}
   - {fileID: 1040833408}
+  - {fileID: 1331469627}
   - {fileID: 695675366}
+  - {fileID: 1708399988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -655,13 +659,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1868269657}
-  - {fileID: 1316077562}
   m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.069, y: 711}
-  m_SizeDelta: {x: 1199.4, y: 186.94}
+  m_AnchoredPosition: {x: 8.2116, y: 711}
+  m_SizeDelta: {x: 1185.7, y: 186.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316583180
 MonoBehaviour:
@@ -678,7 +681,7 @@ MonoBehaviour:
   textLayer: {fileID: 1316077561}
   textVisible: 0
   textHeight: 0
-  textLayerRectTransform: {fileID: 0}
+  textLayerRectTransform: {fileID: 1316077562}
   buttonRectTransform: {fileID: 0}
   parentRectTransform: {fileID: 0}
 --- !u!114 &316583181
@@ -774,81 +777,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316583178}
-  m_CullTransparentMesh: 1
---- !u!1 &409109973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 409109974}
-  - component: {fileID: 409109976}
-  - component: {fileID: 409109975}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &409109974
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409109973}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1546840090}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &409109975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409109973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b6769b67ac1b07940835bc57800acca7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &409109976
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409109973}
   m_CullTransparentMesh: 1
 --- !u!1 &562948769
 GameObject:
@@ -985,14 +913,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 866183028}
-  - {fileID: 1708399988}
   m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3457031, y: -39}
+  m_AnchoredPosition: {x: 1.3456421, y: -38.999756}
   m_SizeDelta: {x: 1199.4, y: 186.94}
-  m_Pivot: {x: 0.5, y: 0.4999997}
+  m_Pivot: {x: 0.5, y: 0.50000024}
 --- !u!114 &695675367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,7 +935,7 @@ MonoBehaviour:
   textLayer: {fileID: 1708399987}
   textVisible: 0
   textHeight: 0
-  textLayerRectTransform: {fileID: 0}
+  textLayerRectTransform: {fileID: 1708399988}
   buttonRectTransform: {fileID: 0}
   parentRectTransform: {fileID: 0}
 --- !u!114 &695675368
@@ -1139,8 +1066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.4866943, y: 0.0000076293945}
-  m_SizeDelta: {x: -10.973, y: 0.000030518}
+  m_AnchoredPosition: {x: -7.1672974, y: -621.4742}
+  m_SizeDelta: {x: 100.1094, y: -1242.6885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766733827
 MonoBehaviour:
@@ -1162,7 +1089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14cffa5700575dc439be1969ffbe9f46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ba227453c18323418474e86711ac148, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1205,17 +1132,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773973338}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1054034304}
+  m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6953, y: -1787}
-  m_SizeDelta: {x: 1021.3979, y: 3378.3928}
+  m_AnchoredPosition: {x: 5.0410767, y: -2318.4453}
+  m_SizeDelta: {x: 1021.3979, y: 5363.283}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773973340
 MonoBehaviour:
@@ -1237,51 +1164,125 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Reducerea amprentei de carbon este esen\u021Bial\u0103 pentru combaterea
-    schimb\u0103rilor climatice \u0219i protejarea mediului. Iat\u0103 c\xE2teva
-    moduri \xEEn care o persoan\u0103 poate s\u0103-\u0219i reduc\u0103 amprenta
-    de carbon:\r\n\r\n1. **Eficien\u021B\u0103 energetic\u0103 \xEEn locuin\u021B\u0103:**\r\n  
-    - Utiliza\u021Bi aparate electrocasnice eficiente energetic \u0219i becuri cu
-    consum redus de energie.\r\n   - Isoleaz\u0103 locuin\u021Ba pentru a reduce
-    consumul de energie pentru \xEEnc\u0103lzire \u0219i r\u0103cire.\r\n   - Opri\u021Bi
-    aparatele electronice atunci c\xE2nd nu sunt utilizate \u0219i utiliza\u021Bi
-    prize cu temporizator sau oprire automat\u0103.\r\n\r\n2. **Utilizarea eficient\u0103
-    a apei:**\r\n   - Repara\u021Bi scurgerile de ap\u0103 \u0219i utiliza\u021Bi
-    dispozitive eficiente din punct de vedere al consumului de ap\u0103.\r\n   -
-    Colecta\u021Bi apa de ploaie pentru irigare sau alte scopuri non-potabile.\r\n\r\n3.
-    **Utilizarea transportului sustenabil:**\r\n   - Utiliza\u021Bi bicicleta, transportul
-    \xEEn comun sau autovehiculele electrice pentru a reduce emisiile de gaze cu
-    efect de ser\u0103 generate de vehiculele cu motor cu ardere intern\u0103.\r\n  
-    - Combineaz\u0103 c\u0103l\u0103toriile \u0219i planific\u0103-\u021Bi traseele
-    pentru a economisi combustibil.\r\n\r\n4. **Adoptarea unui regim alimentar sustenabil:**\r\n  
-    - Redu consumul de carne, deoarece produc\u021Bia acesteia genereaz\u0103 emisii
-    semnificative de gaze cu efect de ser\u0103.\r\n   - Opteaz\u0103 pentru produse
-    locale \u0219i de sezon pentru a reduce amprenta de carbon asociat\u0103 transportului
-    \u0219i produc\u021Biei alimentelor.\r\n\r\n5. **Reciclare \u0219i reducerea
-    de\u0219eurilor:**\r\n   - Recicleaz\u0103 materialele reciclabile \u0219i reduci
-    consumul de produse cu ambalaje excesive.\r\n   - Utilizeaz\u0103 produse durabile
-    \u0219i reutilizabile pentru a reduce cantitatea de de\u0219euri generate.\r\n\r\n6.
-    **Energia regenerabil\u0103:**\r\n   - Opteaz\u0103 pentru surse de energie regenerabil\u0103,
-    cum ar fi panourile solare sau energia eolian\u0103, acolo unde este posibil.\r\n  
-    - Alege furnizori de energie care investesc \xEEn surse de energie regenerabil\u0103.\r\n\r\n7.
-    **Achizi\u021Bii responsabile:**\r\n   - Cump\u0103r\u0103 produse durabile \u0219i
-    de calitate pentru a reduce nevoia de \xEEnlocuire frecvent\u0103.\r\n   - Informeaz\u0103-te
-    despre practicile de produc\u021Bie responsabile ale companiilor de la care cumperi.\r\n\r\n8.
-    **Participarea la ac\u021Biuni comunitare \u0219i activism:**\r\n   - Implic\u0103-te
-    \xEEn ac\u021Biuni comunitare pentru protejarea mediului.\r\n   - Sprijin\u0103
-    ini\u021Biative \u0219i organiza\u021Bii care promoveaz\u0103 sustenabilitatea
-    \u0219i combaterea schimb\u0103rilor climatice.\r\n\r\n9. **Educa\u021Bie \u0219i
-    con\u0219tientizare:**\r\n   - Informeaz\u0103-te despre impactul ac\u021Biunilor
-    tale asupra mediului \u0219i exploreaz\u0103 modalit\u0103\u021Bi de a le \xEEmbun\u0103t\u0103\u021Bi.\r\n  
-    - \xCEmp\u0103rt\u0103\u0219e\u0219te informa\u021Bii \u0219i \xEEncurajeaz\u0103
-    al\u021Bii s\u0103 adopte practici sustenabile.\r\n\r\nFiecare ac\u021Biune individual\u0103
-    conteaz\u0103, iar o colectivitate de astfel de ac\u021Biuni poate avea un impact
-    semnificativ asupra amprentei de carbon globale. Este important s\u0103 ne implic\u0103m
-    \xEEn mod con\u0219tient \xEEn practici sustenabile \u0219i s\u0103 \xEEncuraj\u0103m
-    constant pe al\u021Bii s\u0103 contribuie la protejarea mediului \xEEnconjur\u0103tor.\r"
+  m_text: '      Reducing carbon footprint is crucial for combating climate change
+    and protecting the environment. Here are key ways individuals can minimize their
+    carbon footprint:
+
+    
+
+    1. Home Energy Efficiency:
+
+    
+
+    Use energy-efficient
+    appliances and low-energy light bulbs.
+
+    Insulate homes to reduce energy
+    consumption for heating and cooling.
+
+    Turn off electronics when not in use
+    and use timers or automatic shutoffs.
+
+
+    2. Water Efficiency:
+
+    
+
+    Fix
+    water leaks and use water-efficient devices.
+
+    Harvest rainwater for non-potable
+    purposes.
+
+
+    3. Sustainable Transportation:
+
+    
+
+    Opt for biking,
+    public transport, or electric vehicles to reduce greenhouse gas emissions from
+    internal combustion engine vehicles.
+
+    Combine trips and plan routes to save
+    fuel.
+
+
+    4. Adopting a Sustainable Diet:
+
+    
+
+    Reduce meat consumption
+    due to its significant greenhouse gas emissions during production.
+
+    Choose
+    local and seasonal products to reduce the carbon footprint associated with transportation
+    and food production.
+
+
+    5. Recycling and Waste Reduction:
+
+    
+
+    Recycle
+    recyclable materials and reduce consumption of excessively packaged products.
+
+    Use
+    durable and reusable products to minimize waste.
+
+
+    6. Renewable Energy:
+
+    
+
+    Choose
+    renewable energy sources like solar panels or wind energy where possible.
+
+    Select
+    energy providers that invest in renewable energy sources.
+
+
+    7. Responsible
+    Purchases:
+
+    
+
+    Buy durable and quality products to reduce the need for
+    frequent replacements.
+
+    Learn about the responsible production practices
+    of the companies you support.
+
+
+    8. Community Engagement and Activism:
+
+    
+
+    Participate
+    in community actions for environmental protection.
+
+    Support initiatives
+    and organizations promoting sustainability and combating climate change.
+
+
+    9.
+    Education and Awareness:
+
+    
+
+    Stay informed about the environmental impact
+    of your actions and explore ways to improve them.
+
+    Share information and
+    encourage others to adopt sustainable practices.
+
+
+    Individual actions matter,
+    and a collective effort can significantly impact global carbon footprints. It
+    is crucial to consciously engage in sustainable practices and consistently encourage
+    others to contribute to environmental preservation.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1305,8 +1306,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1341,10 +1342,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 2.8720694}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &773973341
@@ -1412,10 +1413,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Care ar fi regulile \u0219i metodele corecte de a recicla?\r\n"
+  m_text: What are the correct rules and methods for recycling?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1439,13 +1440,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1475,7 +1476,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 129.20221, y: 0, z: 182.4032, w: 0}
+  m_margin: {x: 114.25296, y: 0, z: 145.03015, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1514,17 +1515,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920819359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1174742633}
+  m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.0436, y: -982}
-  m_SizeDelta: {x: 1038.0947, y: 1762.8533}
+  m_AnchoredPosition: {x: 27.101624, y: -454.84656}
+  m_SizeDelta: {x: 1038.0947, y: 2630.5461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920819361
 MonoBehaviour:
@@ -1546,32 +1547,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Schimb\u0103rile climatice sunt \xEEn mare parte cauzate de activit\u0103\u021Bile
-    umane care conduc la cre\u0219terea concentra\u021Biilor de gaze cu efect de
-    ser\u0103 \xEEn atmosfer\u0103. Iat\u0103 c\xE2teva dintre cauzele principale
-    ale schimb\u0103rilor climatice:\r\n\n\r**Arderile de combustibili fosili:**\r\n  
-    - Arderea c\u0103rbunelui, petrolului \u0219i gazelor naturale pentru energie
-    elibereaz\u0103 cantit\u0103\u021Bi mari de dioxid de carbon (CO2) \xEEn atmosfer\u0103.
-    Acesta este unul dintre principalii contribuabili la cre\u0219terea gazelor cu
-    efect de ser\u0103.\r\n\r\n**Defri\u0219\u0103rile:**\r\n   - T\u0103ierea p\u0103durilor
-    \u0219i defri\u0219area contribuie la schimb\u0103rile climatice prin eliminarea
-    arborilor care absorb dioxidul de carbon din atmosfer\u0103. P\u0103durile ac\u021Bioneaz\u0103
-    ca sume de carbon, iar pierderea lor duce la eliberarea mai multor gaze cu efect
-    de ser\u0103.\r\n\r\n**Agricultura intensiv\u0103:**\r\n   - Unele practici agricole
-    elibereaz\u0103 gaze cu efect de ser\u0103, cum ar fi dioxidul de azot (NO2)
-    din \xEEngr\u0103\u0219\u0103minte \u0219i metanul (CH4) din tractoare \u0219i
-    alte procese agricole.\r\n\r\n**Produc\u021Bia industrial\u0103:**\r\n   - Procesele
-    industriale elibereaz\u0103 diverse gaze cu efect de ser\u0103, inclusiv dioxid
-    de carbon, metan \u0219i gaze fluorurate.\r\n\r\n**Schimb\u0103rile \xEEn uzul
-    solului:**\r\n   - Modific\u0103rile aduse utiliz\u0103rii solului, precum schimb\u0103rile
-    \xEEn practicile agricole \u0219i urbanizare, pot afecta ciclurile naturale ale
-    carbonului \u0219i gazelor cu efect de ser\u0103.\r\n\r\n**De\u0219eurile \u0219i
-    gestionarea de\u0219eurilor:**\r\n   - Procesele de descompunere a de\u0219eurilor
-    organice \xEEn gropile de gunoi sau depozitele de de\u0219euri elibereaz\u0103
-    metan, un gaz cu efect de ser\u0103 puternic."
+  m_text: "      Climate change is largely caused by human activities leading to
+    increased concentrations of greenhouse gases in the atmosphere. Here are some
+    key causes of climate change:\r\n\r\n1. Fossil fuel combustion:\n   - Burning
+    coal, oil, and natural gas for energy releases large amounts of carbon dioxide
+    (CO2) into the atmosphere, a major contributor to the rise in greenhouse gases.\r\n\r\n2.
+    Deforestation:\n   - Logging and deforestation contribute to climate change by
+    removing trees that absorb carbon dioxide from the atmosphere. Forests act as
+    carbon sinks, and their loss results in the release of more greenhouse gases.\r\n\r\n3.
+    Intensive agriculture:\n   - Certain agricultural practices release greenhouse
+    gases, such as nitrogen dioxide (NO2) from fertilizers and methane (CH4) from
+    tractors and other farming processes.\r\n\r\n4. Industrial production:\r\n  
+    - Industrial processes release various greenhouse gases, including carbon dioxide,
+    methane, and fluorinated gases.\r\n\r\n5. Changes in land use:\r\n   - Alterations
+    in land use, such as changes in agricultural practices and urbanization, can
+    impact the natural cycles of carbon and greenhouse gases.\r\n\r\n6. Waste and
+    waste management:\n   - Decomposition of organic waste in landfills releases
+    methane, a potent greenhouse gas."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1595,8 +1590,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1631,7 +1626,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 5.060669}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1678,7 +1673,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 178667048}
-  - {fileID: 1331469627}
   m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1701,7 +1695,7 @@ MonoBehaviour:
   textLayer: {fileID: 1331469626}
   textVisible: 0
   textHeight: 0
-  textLayerRectTransform: {fileID: 0}
+  textLayerRectTransform: {fileID: 1331469627}
   buttonRectTransform: {fileID: 0}
   parentRectTransform: {fileID: 0}
 --- !u!114 &1040833410
@@ -1831,7 +1825,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 96409834}
-  - {fileID: 773973339}
   m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1854,7 +1847,7 @@ MonoBehaviour:
   textLayer: {fileID: 773973338}
   textVisible: 0
   textHeight: 0
-  textLayerRectTransform: {fileID: 0}
+  textLayerRectTransform: {fileID: 773973339}
   buttonRectTransform: {fileID: 0}
   parentRectTransform: {fileID: 0}
 --- !u!114 &1054034306
@@ -2052,13 +2045,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1974430158}
-  - {fileID: 920819360}
   m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.058, y: 961}
-  m_SizeDelta: {x: 1199.4, y: 186.94}
+  m_AnchoredPosition: {x: 8.204294, y: 961}
+  m_SizeDelta: {x: 1185.7, y: 186.94}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!114 &1174742634
 MonoBehaviour:
@@ -2075,7 +2067,7 @@ MonoBehaviour:
   textLayer: {fileID: 920819359}
   textVisible: 0
   textHeight: 0
-  textLayerRectTransform: {fileID: 0}
+  textLayerRectTransform: {fileID: 920819360}
   buttonRectTransform: {fileID: 0}
   parentRectTransform: {fileID: 0}
 --- !u!114 &1174742635
@@ -2197,17 +2189,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316077561}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 316583179}
+  m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6953, y: -268}
-  m_SizeDelta: {x: 1021.398, y: 329.0816}
+  m_AnchoredPosition: {x: 18.764301, y: 237.54}
+  m_SizeDelta: {x: 1021.398, y: 740.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316077563
 MonoBehaviour:
@@ -2229,15 +2221,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Principalele scopuri ale aplicaiei noastre, R&T - Recycling & Tracking,
-    sunt de a atrage aten\u021Bia publicului asupra pericolului cauzat de gestionarea
-    incorect\u0103 a de\u0219eurilor prin a ajuta utilizatorul s\u0103 le gestioneze
-    corect \u0219i  asupra distan\u021Bei parcurse cu un automobil fa\u021B\u0103
-    de distan\u021Ba parcurs\u0103 merg\xE2nd, f\u0103r\u0103 arderea continu\u0103
-    de combustibil \u0219i, respectiv emiterea de gaze d\u0103un\u0103toare mediului."
+  m_text: '      The main objectives of our app, R&T - Recycling & Tracking, are
+    to draw public attention to the danger caused by improper waste management by
+    assisting users in proper waste disposal. Additionally, the app aims to highlight
+    the number of times users have recycled and to provide them with a broader perspective
+    by approximating the environmental impact of the app, gathering feedback from
+    users worldwide.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2261,8 +2253,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2297,7 +2289,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -17.886139}
+  m_margin: {x: 0, y: 0, z: 0, w: -2.3311768}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2336,17 +2328,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331469626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1040833408}
+  m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.2321014, y: -1471}
-  m_SizeDelta: {x: 1033.2529, y: 2741.7837}
+  m_AnchoredPosition: {x: -0.886413, y: -1924.584}
+  m_SizeDelta: {x: 1033.2529, y: 4070.9517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331469628
 MonoBehaviour:
@@ -2368,44 +2360,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Problema de\u0219eurilor aruncate necorespunz\u0103tor are consecin\u021Be
-    grave asupra mediului, s\u0103n\u0103t\u0103\u021Bii umane \u0219i economiei.
-    Iat\u0103 c\xE2teva dintre aspectele critice ale acestei probleme:\r\n\r\n1.
-    **Impact asupra mediului:**\r\n   - De\u0219eurile aruncate necorespunz\u0103tor
-    pot polua solul, apa \u0219i aerul. Substan\u021Be chimice periculoase din de\u0219euri
-    pot intra \xEEn sol \u0219i ap\u0103, afect\xE2nd biodiversitatea \u0219i calitatea
-    resurselor naturale.\r\n\r\n2. **Probleme de s\u0103n\u0103tate uman\u0103:**\r\n  
-    - Depozitarea necorespunz\u0103toare a de\u0219eurilor poate duce la contaminarea
-    apei potabile \u0219i la r\u0103sp\xE2ndirea bolilor. Comunit\u0103\u021Bile
-    care tr\u0103iesc \xEEn apropierea depozitelor de de\u0219euri pot fi expuse
-    la substan\u021Be toxice.\r\n\r\n3. **Efecte asupra faunei:**\r\n   - Animalele
-    pot ingestiona accidental de\u0219euri sau pot fi prinse \xEEn materialele de
-    ambalare, ceea ce le pune \xEEn pericol. De asemenea, substan\u021Bele toxice
-    din de\u0219euri pot afecta direct fauna \u0219i flora.\r\n\r\n4. **Poluarea
-    aerului:**\r\n   - Procesele de ardere a de\u0219eurilor, \xEEn special cele
-    necontrolate, pot elibera substan\u021Be chimice toxice \xEEn aer, contribuind
-    la poluarea atmosferic\u0103 \u0219i la probleme de s\u0103n\u0103tate respiratorie.\r\n\r\n5.
-    **Schimb\u0103ri climatice:**\r\n   - Produc\u021Bia \u0219i eliminarea de\u0219eurilor
-    genereaz\u0103 emisii de gaze cu efect de ser\u0103, contribuind la schimb\u0103rile
-    climatice. De exemplu, arderea de\u0219eurilor poate elibera dioxid de carbon
-    \u0219i metan.\r\n\r\n6. **Impact economic:**\r\n   - Gestionarea de\u0219eurilor
-    aruncate necorespunz\u0103tor necesit\u0103 resurse semnificative. Colectarea,
-    transportul, \u0219i eliminarea de\u0219eurilor sunt activit\u0103\u021Bi costisitoare,
-    iar impactul asupra s\u0103n\u0103t\u0103\u021Bii publice poate duce la costuri
-    suplimentare.\r\n\r\n7. **De\u0219euri electronice \u0219i substan\u021Be periculoase:**\r\n  
-    - De\u0219eurile electronice, cum ar fi echipamentele electrice vechi, con\u021Bin
-    adesea substan\u021Be toxice, cum ar fi metalele grele \u0219i substan\u021Bele
-    chimice periculoase. Eliminarea necorespunz\u0103toare a acestor de\u0219euri
-    poate duce la contaminarea mediului.\r\n\r\n8. **Probleme estetice \u0219i turism:**\r\n  
-    - Zonele afectate de depozitele de de\u0219euri necorespunz\u0103toare devin
-    adesea inestetice \u0219i pot descuraja turismul. Aceasta poate avea consecin\u021Be
-    economice negative pentru comunit\u0103\u021Bi.\r\n\r\n9. **Poluarea marilor
-    \u0219i oceanelor:**\r\n   - De\u0219eurile de plastic \u0219i alte materiale
-    pot ajunge \xEEn oceane \u0219i m\u0103ri, av\xE2nd un impact semnificativ asupra
-    mediului marin \u0219i a vie\u021Bii acvatice.\r\n"
+  m_text: "      The issue of improper waste disposal has severe consequences for
+    the environment, human health, and the economy. Here are critical aspects of
+    this problem:\r\n\r\n1. Environmental Impact:\n   - Improperly discarded waste
+    can pollute soil, water, and air, introducing hazardous chemicals that affect
+    biodiversity and the quality of natural resources.\r\n\r\n2. Human Health Issues:\n  
+    - Improper waste storage can contaminate drinking water and spread diseases.
+    Communities near waste dumps may be exposed to toxic substances.\r\n\r\n3. Effects
+    on Wildlife:\n   - Animals may ingest waste accidentally or become entangled
+    in packaging materials, endangering them. Toxic substances from waste can directly
+    harm fauna and flora.\r\n\r\n4. Air Pollution:\n   - Waste incineration processes,
+    especially uncontrolled ones, can release toxic chemicals into the air, contributing
+    to air pollution and respiratory health problems.\r\n\r\n5. Climate Change:\r\n  
+    - Waste production and disposal generate greenhouse gas emissions, contributing
+    to climate change. For instance, waste incineration can release carbon dioxide
+    and methane.\r\n\r\n6. Economic Impact:\r\n   - Improper waste disposal demands
+    significant resources. Collection, transportation, and waste disposal are costly
+    activities, and the impact on public health can lead to additional expenses.\r\n\r\n7.
+    Electronic Waste and Hazardous Substances:\n   - Electronic waste, such as old
+    electrical equipment, often contains toxic substances like heavy metals and hazardous
+    chemicals. Improper disposal of these wastes can lead to environmental contamination.\r\n\r\n8.
+    Aesthetic and Tourism Issues:\n   - Areas affected by improper waste dumps often
+    become unsightly and can discourage tourism, leading to negative economic consequences
+    for communities.\r\n\r\n9. Pollution of Seas and Oceans:\n   - Plastic and other
+    waste materials can reach oceans, significantly impacting marine environments
+    and aquatic life."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2429,8 +2411,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2465,10 +2447,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0.26416203}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1331469629
@@ -2571,57 +2553,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1546840089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1546840090}
-  - component: {fileID: 1546840091}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1546840090
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546840089}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 409109974}
-  m_Father: {fileID: 230408388}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0021362305, y: 540}
-  m_SizeDelta: {x: 706.28, y: 350.36}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1546840091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546840089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding: {x: 0, y: 0, z: 0, w: 0}
-  m_Softness: {x: 0, y: 0}
 --- !u!1 &1708399987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,18 +2578,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708399987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 695675366}
+  m_Father: {fileID: 242025506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4629, y: -1329}
-  m_SizeDelta: {x: 1021.3979, y: 2446.517}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.8701172, y: -2070.4941}
+  m_SizeDelta: {x: 1021.3979, y: 3851.0044}
+  m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1708399989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,43 +2610,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Reciclarea corect\u0103 implic\u0103 respectarea unor reguli \u0219i
-    practici specifice pentru a asigura procesul de reciclare eficient \u0219i pentru
-    a minimiza impactul negativ asupra mediului. Iat\u0103 c\xE2teva reguli \u0219i
-    metode corecte de reciclare:\r\n\r\n1. **Sortarea adecvat\u0103:**\r\n   - Separarea
-    corect\u0103 a de\u0219eurilor este esen\u021Bial\u0103. \xCEn multe locuri,
-    exist\u0103 containere separate pentru h\xE2rtie, carton, sticl\u0103, plastic
-    \u0219i metal.\r\n   - Asigur\u0103-te c\u0103 de\u0219eurile reciclabile sunt
-    curate \u0219i f\u0103r\u0103 contaminare cu alte materiale nereciclabile sau
-    resturi alimentare.\r\n\r\n2. **Cunoa\u0219terea simbolurilor de reciclare:**\r\n  
-    - Familiarizeaz\u0103-te cu simbolurile de reciclare \u0219i cu informa\u021Biile
-    de pe ambalaje. Aceste simboluri indic\u0103 tipul de material \u0219i pot oferi
-    informa\u021Bii privind reciclarea.\r\n\r\n3. **Eliminarea corect\u0103 a contaminan\u021Bilor:**\r\n  
-    - Anumite materiale pot afecta calitatea recicl\u0103rii. De exemplu, h\xE2rtia
-    contaminat\u0103 cu gr\u0103simi sau sticl\u0103 amestecat\u0103 cu alte tipuri
-    de sticl\u0103 pot fi dificil de reciclat. Cur\u0103\u021Barea corespunz\u0103toare
-    este important\u0103.\r\n\r\n4. **Reciclarea corect\u0103 a plasticului:**\r\n  
-    - Plaseaz\u0103 doar tipurile de plastic acceptate \xEEn containerele de reciclare.
-    Multe comunit\u0103\u021Bi recicleaz\u0103 doar anumite tipuri de plastic. Verific\u0103
-    regulile locale de reciclare.\r\n   - \xCEncearc\u0103 s\u0103 evi\u021Bi plasticul
-    de unic\u0103 folosin\u021B\u0103 \u0219i opteaz\u0103 pentru produse reutilizabile.\r\n\r\n5.
-    **Reciclarea h\xE2rtiei \u0219i a cartonului:**\r\n   - Asigur\u0103-te c\u0103
-    h\xE2rtia \u0219i cartonul sunt uscate \u0219i curate. Ambalajele cu straturi
-    multiple pot fi dificil de reciclat, a\u0219a c\u0103 \xEEncearc\u0103 s\u0103
-    evi\u021Bi aceste produse c\xE2nd este posibil.\r\n\r\n6. **Reciclarea sticlelor
-    \u0219i a cutiilor de metal:**\r\n   - Spal\u0103 \u0219i recicleaz\u0103 sticlele
-    \u0219i cutiile de metal. \xCEndep\u0103rteaz\u0103 etichetele \u0219i capacele,
-    deoarece acestea pot avea diferite propriet\u0103\u021Bi de reciclare.\r\n\r\n7.
-    **Reciclarea electronicii \u0219i a de\u0219eurilor periculoase:**\r\n   - Electronicele
-    vechi, bateriile \u0219i alte de\u0219euri periculoase trebuie s\u0103 fie reciclate
-    \xEEn mod corespunz\u0103tor. Mul\u021Bi comercian\u021Bi \u0219i organiza\u021Bii
-    accept\u0103 astfel de de\u0219euri pentru reciclare special\u0103.\r\n\r\n8.
-    **Compostarea de\u0219eurilor organice:**\r\n   - Compostarea resturilor organice
-    poate reduce cantitatea de de\u0219euri care ajung la depozitele de gunoi \u0219i
-    poate oferi un \xEEngr\u0103\u0219\u0103m\xE2nt natural."
+  m_text: "      Proper recycling involves adhering to specific rules and practices
+    to ensure an efficient recycling process and minimize negative environmental
+    impact. Here are key rules and correct recycling methods:\r\n\r\n1. Proper Sorting:\r\n  
+    - Correct waste separation is crucial, with separate containers for paper, cardboard,
+    glass, plastic, and metal in many places.\r\n   - Ensure recyclables are clean
+    and free from contamination with non-recyclable materials or food waste.\r\n\r\n2.
+    Understanding Recycling Symbols:\r\n   - Familiarize yourself with recycling
+    symbols and information on packaging, indicating the material type and providing
+    recycling information.\r\n\r\n3. Correct Contaminant Removal:\n   - Some materials
+    can impact recycling quality. For instance, paper contaminated with grease or
+    glass mixed with other types of glass can be challenging to recycle. Proper cleaning
+    is essential.\r\n\r\n4. Proper Plastic Recycling:\n   - Place only accepted types
+    of plastic in recycling bins. Many communities only recycle specific plastic
+    types. Check local recycling rules.\r\n   - Avoid single-use plastics and opt
+    for reusable products.\r\n\r\n5. Paper and Cardboard Recycling:\n   - Ensure
+    paper and cardboard are dry and clean. Multi-layered packaging can be challenging
+    to recycle, so avoid such products when possible.\r\n\r\n6. Bottle and Metal
+    Can Recycling:\n   - Wash and recycle bottles and metal cans. Remove labels and
+    caps, as they may have different recycling properties.\r\n\r\n7. Electronic and
+    Hazardous Waste Recycling:\r\n   - Old electronics, batteries, and other hazardous
+    waste should be recycled properly. Many retailers and organizations accept such
+    waste for special recycling.\r\n\r\n8. Composting Organic Waste:\n   - Composting
+    organic waste can reduce the amount of waste sent to landfills and provide natural
+    fertilizer."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2739,8 +2660,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2775,10 +2696,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 3.4960935}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1708399990
@@ -2846,10 +2767,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Care e scopul aplica\u021Biei noastre R&T - Recycling & Tracking ?"
+  m_text: 'What is the purpose of our app, R&T - Recycling & Tracking? '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2873,13 +2794,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2957,7 +2878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 120, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974430159
@@ -2980,10 +2901,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Care sunt cauzele principale ale schimb\u0103rii climatice?\r\n"
+  m_text: What are the main causes of climate change?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
+  m_sharedMaterial: {fileID: 1045989421590735618, guid: 39c2e454b7060fb46b444c14098b3ac2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3007,13 +2928,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3043,7 +2964,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 67.744385, y: 0, z: 396.8332, w: 0}
+  m_margin: {x: 187.33862, y: 0, z: 191.28067, w: 11.211952}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3164,10 +3085,10 @@ RectTransform:
   - {fileID: 766733826}
   m_Father: {fileID: 230408388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0021667, y: -618}
-  m_SizeDelta: {x: 706.28, y: 189.27}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 6.0827637}
+  m_SizeDelta: {x: -0.00007915497, y: 0.2467041}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120154418
 MonoBehaviour:
