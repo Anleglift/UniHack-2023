@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Drawing;
 
 public class SpeedCalculator : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class SpeedCalculator : MonoBehaviour
     public float longitude1;
     public float longitude2;
     public TextMeshProUGUI text;
+    public GameObject Standing;
+    public GameObject Car;
+    public GameObject Walking;
+    public TextMeshProUGUI recomandation;
     void Start()
     {
         Invoke("GetInitialPositions", 2f);
@@ -35,13 +40,25 @@ public class SpeedCalculator : MonoBehaviour
         if (speed == 0)
         {
             text.text = "Status: Same vicinity";
+            Walking.SetActive(false);
+            Standing.SetActive(true);
+            Car.SetActive(false) ;
+            recomandation.text = "If the situation allows better go for a walk!";
         }
         else if (speed > 0 && speed <= 10) {
             text.text = "Status: Walking";
+            Walking.SetActive(true);
+            Standing.SetActive(false);
+            Car.SetActive(false);
+            recomandation.text = "Good job, you are helping combat our climate issues";
         }
         else if (speed > 10)
         {
             text.text = "Status: Driving";
+            Walking.SetActive(false);
+            Standing.SetActive(false);
+            Car.SetActive(true);
+            recomandation.text = "It would be better for the environment if you'd walk";
         }
         latitude2 = latitude1;
         longitude2 = longitude1;
