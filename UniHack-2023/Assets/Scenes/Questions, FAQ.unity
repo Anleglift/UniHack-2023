@@ -528,7 +528,7 @@ MonoBehaviour:
   canvasRect: {fileID: 242025506}
   canvas: {fileID: 242025501}
   cam: {fileID: 1401547489}
-  scrollSpeed: 1
+  scrollSpeed: 0.3
   minYPosition: 0
   maxYPosition: 0
   minim: 0
