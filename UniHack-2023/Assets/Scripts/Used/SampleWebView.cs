@@ -68,7 +68,7 @@ public class SampleWebView : MonoBehaviour
             });
 
         // Set WebViewObject margins and visibility
-        webViewObject.SetMargins(5, 100, 5, Screen.height / 2);
+        webViewObject.SetMargins(0, 265, 0, Screen.height / 2 + 80);
         webViewObject.SetTextZoom(100);
         webViewObject.SetVisibility(true);
 
@@ -134,7 +134,7 @@ public class SampleWebView : MonoBehaviour
             });
 
         // Set WebViewObject margins and visibility
-        webViewObject.SetMargins(5, 100, 5, Screen.height / 2);
+        webViewObject.SetMargins(0, 265, 0, Screen.height / 2 + 80);
         webViewObject.SetTextZoom(100);
         webViewObject.SetVisibility(true);
         // Refresh the WebView content when the button is pressed
