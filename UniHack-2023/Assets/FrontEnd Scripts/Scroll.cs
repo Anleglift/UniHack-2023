@@ -20,7 +20,9 @@ public class Scroll : MonoBehaviour
     {
         canvasRect = canvas.GetComponent<RectTransform>();
         // Attributing minYPosition and maxYPosition
-        maxYPosition = cam.transform.position.y * 2.0f;
+        RectTransform firstButton = canvasRect.GetChild(0).GetComponent<RectTransform>();
+        Vector3 firstButtonWorldPos = firstButton.TransformPoint(Vector3.zero);
+        maxYPosition = firstButtonWorldPos.y + firstButton.rect.height * 0.5f - 1;
         foreach (Transform childTransform in canvasRect)
         {
             RectTransform childRect = childTransform.GetComponent<RectTransform>();
@@ -30,7 +32,7 @@ public class Scroll : MonoBehaviour
 
     void Update()
     {
-        
+
         // Get the vertical scroll input from the mouse wheel
         float scrollInput = -Input.GetAxis("Mouse ScrollWheel");
 
@@ -43,52 +45,61 @@ public class Scroll : MonoBehaviour
         // Apply the new Y position to each child element if movement is allowed
         if (IdentifyVisibleLines())
         {
-            if (minim > minYPosition && maxim > maxYPosition)
+            if (maxim > maxYPosition)
             {
-                if (minim - minYPosition > maxim - maxYPosition)
+                if (minim < minYPosition)
                 {
-                    if (scrollInput > 0)
+                    foreach (Transform childTransform in canvasRect)
                     {
+                        // Get the RectTransform of the child element
+                        RectTransform childRect = childTransform.GetComponent<RectTransform>();
+
+                        // Calculate the new Y position based on the input and scroll speed
+                        float newYPosition = childRect.position.y + scrollInput * scrollSpeed;
+
+                        // Apply the new Y position to the child element
+                        childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
+                    }
+                }
+                else
+                {
+                    if (maxim - maxYPosition >= minim - minYPosition)
+                    {
+                        float x = minim - minYPosition;
                         foreach (Transform childTransform in canvasRect)
                         {
                             // Get the RectTransform of the child element
                             RectTransform childRect = childTransform.GetComponent<RectTransform>();
 
                             // Calculate the new Y position based on the input and scroll speed
-                            float newYPosition = childRect.position.y + scrollInput * scrollSpeed;
+                            float newYPosition = childRect.position.y - x-1;
 
                             // Apply the new Y position to the child element
                             childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
                         }
                     }
-                }
-                else
-                {
-                    if (scrollInput < 0)
+                    else
                     {
                         foreach (Transform childTransform in canvasRect)
                         {
-                            // Get the RectTransform of the child element
                             RectTransform childRect = childTransform.GetComponent<RectTransform>();
+                            if (originalPositions.ContainsKey(childRect))
+                                childRect.position = originalPositions[childRect];
 
-                            // Calculate the new Y position based on the input and scroll speed
-                            float newYPosition = childRect.position.y + scrollInput * scrollSpeed;
-
-                            // Apply the new Y position to the child element
-                            childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
                         }
                     }
                 }
             }
             else
             {
+                float x = maxYPosition - maxim;
                 foreach (Transform childTransform in canvasRect)
                 {
                     // Get the RectTransform of the child element
                     RectTransform childRect = childTransform.GetComponent<RectTransform>();
 
                     // Calculate the new Y position based on the input and scroll speed
-                    float newYPosition = childRect.position.y + scrollInput * scrollSpeed;
+                    float newYPosition = childRect.position.y + x+1;
 
                     // Apply the new Y position to the child element
                     childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
@@ -96,23 +107,6 @@ public class Scroll : MonoBehaviour
             }
         }
     }
-
-    /*bool IdentifyVisibleLines()
-    {
-        RectTransform lastButton = canvasRect.GetChild(4).GetComponent<RectTransform>();
-        RectTransform textRectInLastButton = lastButton.GetChild(1).GetComponent<RectTransform>();
-        if (TextOn.textVisible)
-            minim -= textRectInLastButton.rect.height * 1.0f;
-        //Debug.Log(textRectInLastButton.rect.height * 1.0f);
-
-        // Check if the TMP text is visible
-        //Debug.Log(minim);
-        
-        if (minim < minYPosition || maxim > maxYPosition)
-            return true;
-        else
-            return false;
-    }*/
     bool IdentifyVisibleLines()
     {
         RectTransform lastButton = canvasRect.GetChild(canvasRect.childCount - 1).GetComponent<RectTransform>();
@@ -123,11 +117,11 @@ public class Scroll : MonoBehaviour
         // Debug.Log(textRectInLastButton.rect.height * 1.0f);
         Vector3 lastButtonWorldPos = lastButton.TransformPoint(Vector3.zero);
         Vector3 firstButtonWorldPos = firstButton.TransformPoint(Vector3.zero);
-        minim = lastButtonWorldPos.y - lastButton.rect.height* 0.5f;
+        minim = lastButtonWorldPos.y - lastButton.rect.height * 0.5f;
         maxim = firstButtonWorldPos.y + firstButton.rect.height * 0.5f;
         if (TextOn.textVisible)
             minim -= textRectInLastButton.rect.height * 1.0f;
-        
+
         bool isVisible = minim <= minYPosition || maxim >= maxYPosition;
         if (!isVisible)
         {
@@ -136,7 +130,7 @@ public class Scroll : MonoBehaviour
                 RectTransform childRect = childTransform.GetComponent<RectTransform>();
                 if (originalPositions.ContainsKey(childRect))
                     childRect.position = originalPositions[childRect];
-                
+
             }
         }
         return isVisible;
