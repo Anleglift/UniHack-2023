@@ -13,8 +13,7 @@ public class CoordinateSender : MonoBehaviour
     public float lat = -33.85660618894087f;
     public float lon = 151.21500701957325f;
     public GameObject Map;
-    public TextMeshProUGUI latitude;
-    public TextMeshProUGUI longitude;
+    public TextMeshProUGUI text;
     void Start()
     {
         StartCoroutine(CheckLocationPermission());
@@ -27,7 +26,7 @@ public class CoordinateSender : MonoBehaviour
             Permission.RequestUserPermission(Permission.CoarseLocation);
             yield return new WaitForSeconds(1);
         }
-        InvokeRepeating("Update_User", 0f, 1f);
+        InvokeRepeating("Update_User", 0f, 5f);
     }
     void Update_User()
     {
@@ -61,8 +60,6 @@ public class CoordinateSender : MonoBehaviour
 
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
-        latitude.text=lat.ToString();
-        longitude.text=lon.ToString();  
         string latString = lat.ToString().Replace(',', '.');
         string lonString = lon.ToString().Replace(',', '.');
         url2 = $"https://static-map-unihack2023.netlify.app/?lat={latString}&lng={lonString}";

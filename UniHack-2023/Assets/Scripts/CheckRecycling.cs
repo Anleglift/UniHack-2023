@@ -1470,7 +1470,7 @@ public class CheckRecycling : MonoBehaviour
         coordinateList.Add(new Coordinates(45.675936, 25.6113274));
         coordinateList.Add(new Coordinates(45.6759822, 25.6107423));
     }
-    void CheckLocation()
+    public void CheckLocation()
     {
         int ok = 0;
         foreach (var coordinates in coordinateList)
