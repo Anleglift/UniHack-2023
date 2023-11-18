@@ -6,11 +6,10 @@ public class TextOn : MonoBehaviour
 {
     public GameObject textLayer; // Reference to the text layer under the button
     public bool textVisible = false;
-    private float textHeight;
-    public Scroll limits;
-    private RectTransform textLayerRectTransform;
-    private RectTransform buttonRectTransform;
-    private RectTransform parentRectTransform; // Reference to the parent object containing all buttons
+    public float textHeight;
+    public RectTransform textLayerRectTransform;
+    public RectTransform buttonRectTransform;
+    public RectTransform parentRectTransform; // Reference to the parent object containing all buttons
     void Start()
     {
         textLayerRectTransform = textLayer.GetComponent<RectTransform>();
