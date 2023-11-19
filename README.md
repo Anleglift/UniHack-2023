@@ -32,3 +32,7 @@ How does the app know if i have recycled?: Whenever the user is near a recycling
 ### - HLSL
 ### - HTML
 ### - JavaScript
+
+## Potential for the app:
+
+The potential for this app is huge because it can be further improved with more accurate analysis of the user, background functionality for the application and overall quality of life improvements (i.e. more accurate statistics). There is no such app already on the market, some try to mimick the map but don't utilise it in a meaningfull way, therefore the app has a lot of room to grow and expand to other countries and more and more people to help our day to day life.
