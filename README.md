@@ -4,6 +4,8 @@
 
 Short Description: The main objectives of our app, R&T - Recycling & Tracking, are to draw public attention to the danger caused by improper waste management by assisting users in proper waste disposal. Additionally, the app aims to highlight the number of times users have recycled and to provide them with a broader perspective by approximating the environmental impact of the app, gathering feedback from users worldwide.
 
+Incentive: The app provides incentives to the users whenever they have a small carbon footprint (i.e. walking and not using any vehicle) and whenever they hace successfully recycled.The incentives come in the form of the app's own virtual currency which then can be transformed to irl money when they have gathered enough.
+
 ## MLH GOOGLE CLOUD USE:
 
 Google Cloud Use: We utilise the Google Maps API for our base map and on top of that we have added roughly 1430 markers corresponding to the all the locations in Romania where our users can go and recycle, afterwards being rewarded appropiately.The custom-made map is called upon from within Unity updating with their location (only for the user in question) whenever needed. This map can work for multiple users at a time with no problem arrising. 
