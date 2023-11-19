@@ -14,10 +14,10 @@ public class Scroll : MonoBehaviour
     public float minYPosition, maxYPosition;
     public float minim, maxim;
     public TextOn TextOn;
-    Dictionary<RectTransform, Vector3> originalPositions = new Dictionary<RectTransform, Vector3>();
 
     void Start()
     {
+        Time.timeScale = 1f;
         canvasRect = canvas.GetComponent<RectTransform>();
         RectTransform firstButton = canvasRect.GetChild(0).GetComponent<RectTransform>();
         Vector3 firstButtonWorldPos = firstButton.TransformPoint(Vector3.zero);
@@ -25,11 +25,6 @@ public class Scroll : MonoBehaviour
         // Attributing minYPosition and maxYPosition
         minYPosition = 240.1f;
         maxYPosition = firstButtonWorldPos.y + firstButton.rect.height * 0.5f;
-        foreach (Transform childTransform in canvasRect)
-        {
-            RectTransform childRect = childTransform.GetComponent<RectTransform>();
-            originalPositions[childRect] = childRect.position;
-        }
     }
 
     void Update()
@@ -39,8 +34,8 @@ public class Scroll : MonoBehaviour
             float scrollInput = Input.GetTouch(0).deltaPosition.y;
             ScrollContent(scrollInput);
         }
-        
-        /*float scrollInput = -Input.GetAxis("Mouse ScrollWheel");
+        /*
+        float scrollInput = -Input.GetAxis("Mouse ScrollWheel");
         ScrollContent(scrollInput);*/
     }
 
@@ -69,13 +64,28 @@ public class Scroll : MonoBehaviour
                 if (minim > minYPosition)
                 {
                     float x = minim - minYPosition;
+                    float y = 0;
+                    for (float i = 0.1f; i + 0.1f <= x; i = i + 0.1f)
+                    {
+                        foreach (Transform childTransform in canvasRect)
+                        {
+                            // Get the RectTransform of the child element
+                            RectTransform childRect = childTransform.GetComponent<RectTransform>();
+
+                            // Calculate the new Y position based on the input and scroll speed
+                            float newYPosition = childRect.position.y - 0.1f;
+                            y = i;
+                            // Apply the new Y position to the child element
+                            childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
+                        }
+                    }
                     foreach (Transform childTransform in canvasRect)
                     {
                         // Get the RectTransform of the child element
                         RectTransform childRect = childTransform.GetComponent<RectTransform>();
 
                         // Calculate the new Y position based on the input and scroll speed
-                        float newYPosition = childRect.position.y - x - 2.0f;
+                        float newYPosition = childRect.position.y - (x - y);
 
                         // Apply the new Y position to the child element
                         childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
@@ -83,7 +93,7 @@ public class Scroll : MonoBehaviour
                 }
                 else
                 {
-                    if (scrollInput < 0)
+                    if (scrollInput < 0 && maxim > maxYPosition)
                     {
                         foreach (Transform childTransform in canvasRect)
                         {
@@ -106,6 +116,7 @@ public class Scroll : MonoBehaviour
             if (maxim < maxYPosition)
             {
                 float x = maxYPosition - maxim;
+
                 foreach (Transform childTransform in canvasRect)
                 {
                     // Get the RectTransform of the child element
@@ -116,11 +127,14 @@ public class Scroll : MonoBehaviour
 
                     // Apply the new Y position to the child element
                     childRect.position = new Vector3(childRect.position.x, newYPosition, childRect.position.z);
+
                 }
+
+
             }
             else
             {
-                if (scrollInput > 0)
+                if (scrollInput > 0 && minim < minYPosition)
                 {
                     foreach (Transform childTransform in canvasRect)
                     {
