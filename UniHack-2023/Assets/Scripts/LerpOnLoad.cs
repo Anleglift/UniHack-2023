@@ -6,8 +6,9 @@ public class LerpOnLoad : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
     public SpriteRenderer canvasIcon;
+    public SpriteRenderer Logo;
     public GameObject LoadingScrene;
-    public float lerpDuration = 6.0f; // Adjust the duration as needed
+    public float lerpDuration = 2.0f; // Adjust the duration as needed
 
     private float elapsedTime = 0f;
     private bool isLerping = false;
@@ -33,9 +34,14 @@ public class LerpOnLoad : MonoBehaviour
 
             // Lerp the alpha value from 0 to 1
             canvasGroup.alpha = Mathf.Lerp(1f, 0f, t);
+
             Color lerpedColor = canvasIcon.color;
             lerpedColor.a = Mathf.Lerp(1f,0f, t);
             canvasIcon.color = lerpedColor;
+
+            Color lerpedColor2 = Logo.color;
+            lerpedColor2.a = Mathf.Lerp(1f,0f, t);
+            Logo.color = lerpedColor2;
             // Check if lerping is complete
             if (t >= 1.0f)
             {

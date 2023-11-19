@@ -7,6 +7,7 @@ public class Change_Scenes : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
     public GameObject LoadingScrene;
+    public SpriteRenderer Logo;
     public SpriteRenderer canvasIcon;
     public float lerpDuration = 2.0f; // Adjust the duration as needed
 
@@ -74,9 +75,14 @@ public class Change_Scenes : MonoBehaviour
 
             // Lerp the alpha value from 0 to 1
             canvasGroup.alpha = Mathf.Lerp(0f, 1f, t);
+
             Color lerpedColor = canvasIcon.color;
             lerpedColor.a = Mathf.Lerp(0f, 1f, t);
             canvasIcon.color = lerpedColor;
+
+            Color lerpedColor2 = Logo.color;
+            lerpedColor2.a = Mathf.Lerp(0f, 1f, t);
+            Logo.color = lerpedColor2;
             // Check if lerping is complete
             if (t >= 1.0f)
             {

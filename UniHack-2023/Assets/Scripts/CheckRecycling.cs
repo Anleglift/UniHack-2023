@@ -1476,9 +1476,9 @@ public class CheckRecycling : MonoBehaviour
         int ok = 0;
         foreach (var coordinates in coordinateList)
         {
-            if(CoordinateSender.lat < coordinates.x + 0.003 && CoordinateSender.lat > coordinates.x - 0.003)
+            if(CoordinateSender.lat < coordinates.x + 0.00003 && CoordinateSender.lat > coordinates.x - 0.00003)
             {
-                if(CoordinateSender.lon < coordinates.y + 0.003 && CoordinateSender.lon > coordinates.y - 0.003)
+                if(CoordinateSender.lon < coordinates.y + 0.00003 && CoordinateSender.lon > coordinates.y - 0.00003)
                 {
                     ok = 1;
                 }

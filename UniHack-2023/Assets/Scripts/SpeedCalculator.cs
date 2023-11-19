@@ -25,7 +25,7 @@ public class SpeedCalculator : MonoBehaviour
         longitude1 = CoordinateSender.lon;
         latitude2 = latitude1;
         longitude2 = longitude1;
-        InvokeRepeating("UpdatePositions", 5f, 30f);
+        InvokeRepeating("UpdatePositions", 2f, 5f);
     }
 
     void UpdatePositions()
@@ -35,9 +35,9 @@ public class SpeedCalculator : MonoBehaviour
         double distance = CalculateEuclideanDistance(latitude1, longitude1, latitude2, longitude2);
 
         // Calculate speed in meters per second
-        double speed = distance / 30; // Assuming 5 seconds between updates
+        double speed = distance / 5; // Assuming 5 seconds between updates
 
-        if (speed == 0)
+        if (speed >= 0 && speed <= 0.5f)
         {
             text.text = "Status: Same vicinity";
             Walking.SetActive(false);
@@ -45,14 +45,14 @@ public class SpeedCalculator : MonoBehaviour
             Car.SetActive(false) ;
             recomandation.text = "If the situation allows better go for a walk!";
         }
-        else if (speed > 0 && speed <= 10) {
+        else if (speed > 0.5f && speed <= 3) {
             text.text = "Status: Walking";
             Walking.SetActive(true);
             Standing.SetActive(false);
             Car.SetActive(false);
             recomandation.text = "Good job, you are helping combat our climate issues";
         }
-        else if (speed > 10)
+        else if (speed > 3)
         {
             text.text = "Status: Driving";
             Walking.SetActive(false);
@@ -66,16 +66,8 @@ public class SpeedCalculator : MonoBehaviour
 
     double CalculateEuclideanDistance(double lat1, double lon1, double lat2, double lon2)
     {
-        double dLat = Mathf.Abs((float)(lat2 - lat1));
-        double dLon = Mathf.Abs((float)(lon2 - lon1));
-        if (dLat < 0)
-        {
-            dLat*=-1;
-        }
-        if (dLon < 0)
-        {
-            dLon*=-1;
-        }
+        double dLat = ((float)(lat2 - lat1));
+        double dLon = ((float)(lon2 - lon1));
         double distance = Mathf.Sqrt((float)(dLat * dLat + dLon * dLon));
 
         return distance;
