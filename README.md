@@ -23,3 +23,12 @@ How does the app know my status?: Using the geoLocation from within Unity we get
 ### Recycle Checker:
 
 How does the app know if i have recycled?: Whenever the user is near a recycling location then it pressed an in-app button which then querries the known locations of the markers and checks if the user is within a 3m radius of the recycling location, if they are they are rewarded accordingly if not the user is informed and they can try again.
+
+## Used Languages:
+
+### - C#
+### - Objective C++
+### - ShaderLab
+### - HLSL
+### - HTML
+### - JavaScript
